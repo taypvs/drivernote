@@ -1,7 +1,6 @@
-package app.camnanglaixe.com.camnanglaixe.network;
+package app.camnanglaixe.com.android.network;
 
 import android.content.Context;
-import android.os.AsyncTask;
 import android.util.Log;
 
 import com.android.volley.AuthFailureError;
@@ -16,7 +15,7 @@ import org.json.JSONObject;
 import java.util.HashMap;
 import java.util.Map;
 
-import app.camnanglaixe.com.camnanglaixe.Common.Constanst;
+import app.camnanglaixe.com.android.Common.Constanst;
 
 /**
  * Created by phamvietsontay on 11/27/16.

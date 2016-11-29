@@ -1,4 +1,4 @@
-package app.camnanglaixe.com.camnanglaixe.network;
+package app.camnanglaixe.com.android.network;
 
 /**
  * Created by phamvietsontay on 11/27/16.

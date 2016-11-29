@@ -1,4 +1,4 @@
-package app.camnanglaixe.com.camnanglaixe.Common;
+package app.camnanglaixe.com.android.Common;
 
 /**
  * Created by phamvietsontay on 11/27/16.
