@@ -1,5 +1,9 @@
 package app.camnanglaixe.com.android.jsonhandler;
 
+import org.json.JSONObject;
+
+import app.camnanglaixe.com.android.models.Topic;
+
 /**
  * Created by taypham on 29/11/2016.
  */
@@ -21,10 +25,17 @@ public class JsonParseMachine {
 //        return null;
 //    }
 
-//    public static Topic parseTopic(JSONObject jsonObject){
-//        Topic newTopic;
-//
-//
-//        return newTopic;
-//    }
+    public static Topic parseTopic(JSONObject jsonObject){
+        Topic newTopic;
+
+        String id = jsonObject.optString("id","");
+        int version = jsonObject.optInt("version", 1);
+        String title = jsonObject.optString("title","");
+        String icon = jsonObject.optString("icon","");
+        String type = jsonObject.optString("type","");
+
+        newTopic = new Topic(id, title, type, icon, version, jsonObject.optJSONArray("small_topic"));
+
+        return newTopic;
+    }
 }

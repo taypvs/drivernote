@@ -11,4 +11,7 @@ public class Constanst {
     public  static String API_TEST = "http://api.androidhive.info/volley/person_object.json";
     public  static String API_TEST2 = "https://httpbin.org/get";
 
+    // FILE LOAD
+    public static String FILE_JSON_TEST = "jsonTest.txt";
+
 }

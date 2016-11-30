@@ -27,7 +27,7 @@ public class HttpVolleyConnector {
 
     public ResponseCallbackInterface responeCallback;
 
-    public void doConnectingApi(String method){
+    public void doConnectingApi(String method, final String TAG){
         int methodRq = 0;
         if(method.equals(Constanst.GET))
             methodRq = Request.Method.GET;
@@ -40,7 +40,7 @@ public class HttpVolleyConnector {
                     @Override
                     public void onResponse(JSONObject response) {
                         Log.d("TayPVS","TayPVS response : " + response.toString());
-                        responeCallback.onResultSuccess(response);
+                        responeCallback.onResultSuccess(response, TAG);
                     }
                 }, new Response.ErrorListener() {
 
@@ -48,7 +48,7 @@ public class HttpVolleyConnector {
                     public void onErrorResponse(VolleyError error) {
                         // TODO Auto-generated method stub
                         Log.d("TayPVS","TayPVS error : " + error.toString());
-                        responeCallback.onResultFail(error);
+                        responeCallback.onResultFail(error, TAG);
                     }
 
                 })
