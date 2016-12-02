@@ -11,18 +11,18 @@ import app.camnanglaixe.com.android.network.ResponseCallbackInterface;
 /**
  * Created by phamvietsontay on 11/27/16.
  */
-public class TestApiWebservice extends HttpVolleyConnector {
+public class LoadFullJsonWebservice extends HttpVolleyConnector {
 
 
-    public TestApiWebservice(ResponseCallbackInterface respone, Context context){
+    public LoadFullJsonWebservice(ResponseCallbackInterface respone, Context context){
         mContext = context;
-        url = Constanst.API_TEST2;
+        url = Constanst.API_GET_FULL_INFO;
         responeCallback = respone;
         mRequestQueue =  Volley.newRequestQueue(mContext.getApplicationContext());
     }
 
-    public void doGetJSONTest(){
-        doConnectingApi(Constanst.GET, Constanst.TAG_API_GET_FULL_INFO, RETURN_OBJECT_JSON);
+    public void doLoadAPI(){
+        doConnectingApi(Constanst.GET, Constanst.TAG_API_GET_FULL_INFO, RETURN_ARRAY_JSON);
     }
 
 }

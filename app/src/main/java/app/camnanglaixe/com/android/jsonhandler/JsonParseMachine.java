@@ -29,7 +29,7 @@ public class JsonParseMachine {
         Topic newTopic;
 
         String id = jsonObject.optString("id","");
-        int version = jsonObject.optInt("version", 1);
+        String version = jsonObject.optString("version", "");
         String title = jsonObject.optString("title","");
         String icon = jsonObject.optString("icon","");
         String type = jsonObject.optString("type","");

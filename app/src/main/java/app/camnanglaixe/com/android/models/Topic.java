@@ -14,23 +14,23 @@ public class Topic {
     public String title;
     public String type;
     public String icon;
-    public int version;
-    public List<SubTopicObject> subTopics;
+    public String version;
+    public List<SubTopicObject> small_topic;
 
-    public Topic(String id, String title, String type, String icon, int version, JSONArray subTitleArray){
+    public Topic(String id, String title, String type, String icon, String version, JSONArray subTitleArray){
         this.id = id;
         this.title = title;
         this.type = type;
         this.icon = icon;
         this.version = version;
-        subTopics = new ArrayList<SubTopicObject>();
+        small_topic = new ArrayList<SubTopicObject>();
         try {
             for (int i = 0; i < subTitleArray.length(); i++) {
                 String subTopicId = subTitleArray.getJSONObject(i).optString("id");
                 String subTopicTitle = subTitleArray.getJSONObject(i).optString("title");
                 JSONArray contentArray = subTitleArray.getJSONObject(i).optJSONArray("content");
                 SubTopicObject newSubTopic = new SubTopicObject(subTopicId, subTopicTitle, contentArray);
-                subTopics.add(newSubTopic);
+                small_topic.add(newSubTopic);
             }
         }catch (JSONException e){
 
