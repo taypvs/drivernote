@@ -6,15 +6,9 @@
 
     <include layout="@layout/header"/>
 
-    <GridView
-        android:id="@+id/mainGridLayout"
+    <ListView
+        android:id="@+id/listSubTopic"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:numColumns="2"
-        android:paddingTop="1dp"
-        android:paddingLeft="1dp"
-        android:paddingRight="1dp"
-        android:horizontalSpacing="1dp"
-        android:verticalSpacing="1dp"/>
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>

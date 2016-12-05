@@ -4,6 +4,8 @@ package app.camnanglaixe.com.android.Common;
  * Created by phamvietsontay on 11/27/16.
  */
 public class Constanst {
+    public static final int NUM_OF_TOPICS = 5;
+
     public static String GET = "GET";
     public static String POST = "POST";
 
@@ -20,7 +22,5 @@ public class Constanst {
     public static String FILE_NAME_JSON_TOPIC_PREFIX = "TOPIC_";
     public static String FILE_NAME_JSON_TOPIC_FORMAT = ".txt";
     public static String FILE_JSON_TEST = "InitialFile.txt";
-
-
 
 }

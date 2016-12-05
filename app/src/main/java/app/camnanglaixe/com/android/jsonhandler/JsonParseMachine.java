@@ -30,11 +30,11 @@ public class JsonParseMachine {
 
         String id = jsonObject.optString("id","");
         String version = jsonObject.optString("version", "");
-        String title = jsonObject.optString("title","");
+        String name = jsonObject.optString("name","");
         String icon = jsonObject.optString("icon","");
         String type = jsonObject.optString("type","");
 
-        newTopic = new Topic(id, title, type, icon, version, jsonObject.optJSONArray("small_topic"));
+        newTopic = new Topic(id, type, name, icon, version, jsonObject.optJSONArray("small_topic"));
 
         return newTopic;
     }

@@ -1,11 +1,19 @@
 package app.camnanglaixe.com.android.adapter;
 
+import android.content.Context;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import java.util.List;
 
+import app.camnanglaixe.com.android.Common.CommonUtils;
+import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.models.Topic;
 
 /**
@@ -14,9 +22,12 @@ import app.camnanglaixe.com.android.models.Topic;
 public class ListTopicAdapter extends BaseAdapter {
 
     private List<Topic> topics;
-
-    public ListTopicAdapter(List<Topic> topics){
+    private LayoutInflater mInflater;
+    private Context context;
+    public ListTopicAdapter(Context context, List<Topic> topics){
+        this.context = context;
         this.topics = topics;
+        this.mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
@@ -36,6 +47,30 @@ public class ListTopicAdapter extends BaseAdapter {
 
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
+        ViewHolder holder;
+        if (view == null) {
+            holder = new ViewHolder();
+            view = mInflater.inflate(R.layout.adapter_list_main_topic, null);
+            holder.imgv = (ImageView) view.findViewById(R.id.topic_icon);
+            holder.title = (TextView) view.findViewById(R.id.topic_title);
+            holder.layout = (RelativeLayout) view.findViewById(R.id.topic_tab_layout);
+            view.setTag(holder);
+        } else {
+            holder = (ViewHolder) view.getTag();
+        }
+
+        Log.d("TayPVS","TayPVS - topic title : " + topics.get(i).name);
+        holder.title.setText(topics.get(i).name);
+        if(android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
+            holder.layout.setBackground(CommonUtils.getXmlResourceByName(context, "main_color_" + i + "_selector"));
+        else
+            holder.layout.setBackgroundDrawable(CommonUtils.getXmlResourceByName(context, "main_color_" + i + "_selector"));
+        return view;
+    }
+
+    class ViewHolder {
+        RelativeLayout layout;
+        ImageView imgv;
+        TextView title;
     }
 }

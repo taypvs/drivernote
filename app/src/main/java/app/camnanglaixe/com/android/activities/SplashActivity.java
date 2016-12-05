@@ -28,13 +28,15 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
+        init();
 //        new LoadFileJsonTask().execute("");
 
     }
 
     private void init() {
+        Log.d("TayPVS", "TayPVS - Splash");
         if (PreferenceUtils.isFirstTimeLaungh(getBaseContext())) {
+            CommonUtils.clearPreferencesTopics(getBaseContext());
             if (CommonUtils.isOnline(getBaseContext())) {
                 loadAllws = new LoadFullJsonWebservice(this, this);
                 loadAllws.doLoadAPI();

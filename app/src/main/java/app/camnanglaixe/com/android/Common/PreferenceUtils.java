@@ -13,7 +13,7 @@ public class PreferenceUtils {
     public static String TOPIC_NUMBER = "TOPIC_NUMBER_";
     public static String IS_FIRST_TIME_LAUNGH = "IS_FIRST_TIME_LAUNGH";
 
-    public static void saveTopic(Context context, String key, String detail){
+    public static void saveString(Context context, String key, String detail){
         //Creating a shared preference
         SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         Editor prefsEditor = mPrefs.edit();
@@ -21,7 +21,7 @@ public class PreferenceUtils {
         prefsEditor.commit();
     }
 
-    public static String getTopic(Context context, String key){
+    public static String getString(Context context, String key){
         SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         return mPrefs.getString(key, "");
     }
@@ -29,13 +29,17 @@ public class PreferenceUtils {
     public static void saveFirstTimeLaungh(Context context){
         SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
         Editor prefsEditor = mPrefs.edit();
-        prefsEditor.putBoolean(IS_FIRST_TIME_LAUNGH, true);
+        prefsEditor.putBoolean(IS_FIRST_TIME_LAUNGH, false);
         prefsEditor.commit();
     }
 
     public static boolean isFirstTimeLaungh(Context context){
         SharedPreferences mPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return mPrefs.getBoolean(IS_FIRST_TIME_LAUNGH, false);
+        return mPrefs.getBoolean(IS_FIRST_TIME_LAUNGH, true);
     }
 
+    public static void clearKeyPreferences(Context context, String key){
+        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
+        settings.edit().remove(key).commit();
+    }
 }

@@ -32,7 +32,7 @@ public class FullTopics {
                 // Convert topic to String and save
                 Gson gson = new Gson();
                 String json = gson.toJson(topic);
-                PreferenceUtils.saveTopic(context, json, PreferenceUtils.TOPIC_NUMBER + i);
+                PreferenceUtils.saveString(context, PreferenceUtils.TOPIC_NUMBER + i, json);
 
                 // Write topic to Files
                 CommonUtils.saveObjectToFile(context, topic, Constanst.FILE_NAME_JSON_TOPIC_PREFIX + i + Constanst.FILE_NAME_JSON_TOPIC_FORMAT);

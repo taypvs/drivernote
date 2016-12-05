@@ -39,6 +39,8 @@ public class HttpVolleyConnector {
         else if(method.equals(Constanst.POST))
             methodRq = Request.Method.POST;
 
+        Log.d("TayPVS", "TayPVS url : " + url);
+
         switch (returnType) {
             case RETURN_OBJECT_JSON:
                 jsonObjectRequest(methodRq, TAG);
