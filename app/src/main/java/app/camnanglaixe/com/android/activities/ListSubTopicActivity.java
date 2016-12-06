@@ -1,15 +1,21 @@
 package app.camnanglaixe.com.android.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import app.camnanglaixe.com.android.Common.PreferenceUtils;
 import app.camnanglaixe.com.android.R;
+import app.camnanglaixe.com.android.adapter.ListSubTopicAdapter;
 import app.camnanglaixe.com.android.jsonhandler.JsonParseMachine;
 import app.camnanglaixe.com.android.models.Topic;
 
@@ -20,6 +26,7 @@ public class ListSubTopicActivity extends BaseActivity {
 
     private ListView listViewSTopic;
     private Topic currentTopic;
+    private ListSubTopicAdapter listSubTopicAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,7 +46,22 @@ public class ListSubTopicActivity extends BaseActivity {
             }
         }
 
-        listViewSTopic = (ListView) findViewById(R.id.listSubTopic);
         ((TextView)findViewById(R.id.title)).setText(currentTopic.name);
+
+        listViewSTopic = (ListView) findViewById(R.id.listSubTopic);
+        listSubTopicAdapter = new ListSubTopicAdapter(getBaseContext(), currentTopic.small_topic);
+        listViewSTopic.setAdapter(listSubTopicAdapter);
+        listViewSTopic.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                // Convert topic to String and save
+                Gson gson = new Gson();
+                String json = gson.toJson(currentTopic.small_topic.get(i));
+                Intent intent = new Intent(ListSubTopicActivity.this, ContentDetailTextActivity.class);
+                intent.putExtra("KEY_CONTENT", json);
+                startActivity(intent);
+//                overridePendingTransition(R.anim.slide_from_right, 0);
+            }
+        });
     }
 }

@@ -4,15 +4,19 @@
     <color name="black">#000000</color>
     <color name="white">#ffffff</color>
 
+    <color name="header_black">#262626</color>
+    <color name="title_content_gray">#E6E6E6</color>
+    <color name="bg_content_gray">#E6E6E6</color>
+
     <!-- Grid Main Tab Color  -->
-    <color name="main_0">#f7d0ba</color>
-    <color name="main_1">#006d9f</color>
-    <color name="main_2">#89d6a9</color>
-    <color name="main_3">#ed3e64</color>
-    <color name="main_4">#009a59</color>
-    <color name="main_5">#fe9200</color>
+    <color name="main_0">#f4cbb7</color>
+    <color name="main_1">#016ca0</color>
+    <color name="main_2">#89d4a9</color>
+    <color name="main_3">#ed3d63</color>
+    <color name="main_4">#009959</color>
+    <color name="main_5">#ff9000</color>
     <color name="main_6">#ef798a</color>
-    <color name="main_7">#846b6a</color>
+    <color name="main_7">#846a6a</color>
 
     <!-- Grid Main Tab Color Clicked -->
     <color name="main_0_clicked">#f9d0cb</color>

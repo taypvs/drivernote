@@ -74,7 +74,7 @@ public class CommonUtils {
         return context.getResources().getColor(context.getResources().getIdentifier(colorName, "color", context.getPackageName()));
     }
 
-    public static Drawable getXmlResourceByName(Context context, String fileName) {
+    public static Drawable getDrawableResourceByName(Context context, String fileName) {
         if (android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1) {
             return context.getResources().getDrawable(context.getResources().getIdentifier(fileName, "drawable", context.getPackageName()));
         } else {

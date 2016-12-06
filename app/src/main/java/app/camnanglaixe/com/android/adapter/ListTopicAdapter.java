@@ -1,7 +1,6 @@
 package app.camnanglaixe.com.android.adapter;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,12 +58,15 @@ public class ListTopicAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
 
-        Log.d("TayPVS","TayPVS - topic title : " + topics.get(i).name);
         holder.title.setText(topics.get(i).name);
-        if(android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
-            holder.layout.setBackground(CommonUtils.getXmlResourceByName(context, "main_color_" + i + "_selector"));
-        else
-            holder.layout.setBackgroundDrawable(CommonUtils.getXmlResourceByName(context, "main_color_" + i + "_selector"));
+        if(android.os.Build.VERSION.SDK_INT > android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1) {
+            holder.layout.setBackground(CommonUtils.getDrawableResourceByName(context, "main_color_" + i + "_selector"));
+        }
+        else {
+            holder.layout.setBackgroundDrawable(CommonUtils.getDrawableResourceByName(context, "main_color_" + i + "_selector"));
+        }
+        if(topics.get(i).icon!=null&&!topics.get(i).icon.equals(""))
+            holder.imgv.setImageDrawable(CommonUtils.getDrawableResourceByName(context, topics.get(i).icon));
         return view;
     }
 

@@ -5,6 +5,9 @@ package app.camnanglaixe.com.android.Common;
  */
 public class Constanst {
     public static final int NUM_OF_TOPICS = 5;
+    public static final String TYPE_1 = "type 1"; // Default Text type
+    public static final String TYPE_2 = "type 2"; // Image Signal type
+    public static final String TYPE_3 = "type 3"; // HTML type
 
     public static String GET = "GET";
     public static String POST = "POST";

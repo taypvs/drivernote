@@ -1,7 +1,9 @@
 package app.camnanglaixe.com.android.jsonhandler;
 
+import org.json.JSONArray;
 import org.json.JSONObject;
 
+import app.camnanglaixe.com.android.models.SubTopicObject;
 import app.camnanglaixe.com.android.models.Topic;
 
 /**
@@ -27,15 +29,21 @@ public class JsonParseMachine {
 
     public static Topic parseTopic(JSONObject jsonObject){
         Topic newTopic;
-
         String id = jsonObject.optString("id","");
         String version = jsonObject.optString("version", "");
         String name = jsonObject.optString("name","");
         String icon = jsonObject.optString("icon","");
-        String type = jsonObject.optString("type","");
-
-        newTopic = new Topic(id, type, name, icon, version, jsonObject.optJSONArray("small_topic"));
-
+        String type_name = jsonObject.optString("type_name","");
+        newTopic = new Topic(id, type_name, name, icon, version, jsonObject.optJSONArray("small_topic"));
         return newTopic;
+    }
+
+    public static SubTopicObject parseSubTopic(JSONObject jsonObject){
+        String id = jsonObject.optString("id","");
+        String title = jsonObject.optString("title","");
+        JSONArray contentArray = jsonObject.optJSONArray("content");
+        SubTopicObject newSubTopic = new SubTopicObject(id, title, contentArray);
+
+        return newSubTopic;
     }
 }

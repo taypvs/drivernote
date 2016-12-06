@@ -12,15 +12,15 @@ import java.util.List;
 public class Topic {
     public String id;
     public String name;
-    public String type;
+    public String type_name;
     public String icon;
     public String version;
     public List<SubTopicObject> small_topic;
 
-    public Topic(String id, String type, String name, String icon, String version, JSONArray subTitleArray){
+    public Topic(String id, String type_name, String name, String icon, String version, JSONArray subTitleArray){
         this.id = id;
         this.name = name;
-        this.type = type;
+        this.type_name = type_name;
         this.icon = icon;
         this.version = version;
         small_topic = new ArrayList<SubTopicObject>();
