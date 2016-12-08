@@ -1,6 +1,5 @@
 package app.camnanglaixe.com.android.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -57,9 +56,7 @@ public class ListSubTopicActivity extends BaseActivity {
                 // Convert topic to String and save
                 Gson gson = new Gson();
                 String json = gson.toJson(currentTopic.small_topic.get(i));
-                Intent intent = new Intent(ListSubTopicActivity.this, ContentDetailTextActivity.class);
-                intent.putExtra("KEY_CONTENT", json);
-                startActivity(intent);
+                startContentActivity(currentTopic.small_topic.get(i).type_name, json);
 //                overridePendingTransition(R.anim.slide_from_right, 0);
             }
         });

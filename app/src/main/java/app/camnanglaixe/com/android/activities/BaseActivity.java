@@ -10,12 +10,16 @@ import app.camnanglaixe.com.android.Common.Constanst;
  */
 public class BaseActivity extends Activity {
 
+    private void init(){
+
+    }
+
     protected void startSubActivity(String type, int i){
         Intent intent = null;
         if(type.toLowerCase().equals(Constanst.TYPE_1)) { // Default Type
             intent = new Intent(getBaseContext(), ListSubTopicActivity.class);
         } else if(type.equals(Constanst.TYPE_2)){ // Image Signal type
-
+            intent = new Intent(getBaseContext(), ListSignActivity.class);
         } else if(type.equals(Constanst.TYPE_3)){ // HTML type
 
         }
@@ -25,4 +29,17 @@ public class BaseActivity extends Activity {
         }
     }
 
+    protected void startContentActivity(String type, String content){
+        Intent intent = null;
+        if(type.toLowerCase().equals(Constanst.TYPE_POST_1)) { // Default Type
+            intent = new Intent(getBaseContext(), ContentDetailTextActivity.class);
+        } else if(type.toLowerCase().equals(Constanst.TYPE_POST_2)){ // Definition List Type
+            intent = new Intent(getBaseContext(), ContentDetailDefActivity.class);
+        } else if(type.toLowerCase().equals(Constanst.TYPE_POST_3)){ // Image Signal List type
+        }
+        if(intent!=null) {
+            intent.putExtra("KEY_CONTENT", content);
+            startActivity(intent);
+        }
+    }
 }

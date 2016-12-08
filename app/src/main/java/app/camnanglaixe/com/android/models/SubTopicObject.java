@@ -12,11 +12,13 @@ import java.util.List;
 public class SubTopicObject {
     public String id;
     public String title;
+    public String type_name;
     public List<ContentDetailRule> content;
 
-    public SubTopicObject(String id, String title, JSONArray contentArray){
+    public SubTopicObject(String id, String title, String type_name, JSONArray contentArray){
         this.id = id;
         this.title = title;
+        this.type_name = type_name;
         content = new ArrayList<ContentDetailRule>();
         try {
             for (int i = 0; i < contentArray.length(); i++) {

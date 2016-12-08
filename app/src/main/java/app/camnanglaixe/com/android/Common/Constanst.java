@@ -4,10 +4,14 @@ package app.camnanglaixe.com.android.Common;
  * Created by phamvietsontay on 11/27/16.
  */
 public class Constanst {
-    public static final int NUM_OF_TOPICS = 3;
+    public static final int NUM_OF_TOPICS = 4;
     public static final String TYPE_1 = "type 1"; // Default Text type
     public static final String TYPE_2 = "type 2"; // Image Signal type
     public static final String TYPE_3 = "type 3"; // HTML type
+
+    public static final String TYPE_POST_1 = "post type 1"; // Default list text type
+    public static final String TYPE_POST_2 = "post type 2"; // Definition List Type
+    public static final String TYPE_POST_3 = "post type 3";// Image Signal List type
 
     public static String GET = "GET";
     public static String POST = "POST";

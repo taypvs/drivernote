@@ -28,8 +28,9 @@ public class Topic {
             for (int i = 0; i < subTitleArray.length(); i++) {
                 String subTopicId = subTitleArray.getJSONObject(i).optString("id");
                 String subTopicTitle = subTitleArray.getJSONObject(i).optString("title");
+                String subType = subTitleArray.getJSONObject(i).optString("type_name");
                 JSONArray contentArray = subTitleArray.getJSONObject(i).optJSONArray("content");
-                SubTopicObject newSubTopic = new SubTopicObject(subTopicId, subTopicTitle, contentArray);
+                SubTopicObject newSubTopic = new SubTopicObject(subTopicId, subTopicTitle, subType, contentArray);
                 small_topic.add(newSubTopic);
             }
         }catch (JSONException e){
