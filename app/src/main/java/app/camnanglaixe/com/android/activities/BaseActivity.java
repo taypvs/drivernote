@@ -10,7 +10,7 @@ import app.camnanglaixe.com.android.Common.Constanst;
  */
 public class BaseActivity extends Activity {
 
-    private void init(){
+    protected void init(){
 
     }
 
@@ -42,4 +42,5 @@ public class BaseActivity extends Activity {
             startActivity(intent);
         }
     }
+
 }

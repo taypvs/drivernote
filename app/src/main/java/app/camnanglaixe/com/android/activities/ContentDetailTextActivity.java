@@ -30,7 +30,7 @@ public class ContentDetailTextActivity extends BaseActivity {
         init();
     }
 
-    private void init(){
+    protected void init(){
         if (getIntent().hasExtra("KEY_CONTENT")) {
             try {
                 String json = getIntent().getStringExtra("KEY_CONTENT");

@@ -34,7 +34,7 @@ public class MainActivity extends BaseActivity{
         init();
     }
 
-    private void init(){
+    protected void init(){
         Log.d("TayPVS","TayPVS - Main");
         addTopics();
         topicGridView = (GridView) findViewById(R.id.mainGridLayout);

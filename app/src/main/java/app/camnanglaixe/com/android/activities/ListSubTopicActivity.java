@@ -33,7 +33,7 @@ public class ListSubTopicActivity extends BaseActivity {
         init();
     }
 
-    private void init(){
+    protected void init(){
         if (getIntent().hasExtra("KEY_TOPIC")) {
             try {
                 int i = getIntent().getIntExtra("KEY_TOPIC", 0);

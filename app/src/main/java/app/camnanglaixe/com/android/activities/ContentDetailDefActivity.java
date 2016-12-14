@@ -25,9 +25,10 @@ public class ContentDetailDefActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content_def);
+        init();
     }
 
-    private void init(){
+    protected void init(){
         if (getIntent().hasExtra("KEY_CONTENT")) {
             try {
                 String json = getIntent().getStringExtra("KEY_CONTENT");
@@ -41,6 +42,8 @@ public class ContentDetailDefActivity extends BaseActivity {
 
         listContentView = (ListView) findViewById(R.id.listContentText);
         listContentDefAdapter = new ListContentDefAdapter(getBaseContext(), currentSubTopic.content);
+        listContentView.setAdapter(listContentDefAdapter);
+        listContentDefAdapter.notifyDataSetChanged();
     }
 
 }

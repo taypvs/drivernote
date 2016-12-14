@@ -33,7 +33,7 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
 
     }
 
-    private void init() {
+    protected void init() {
         Log.d("TayPVS", "TayPVS - Splash");
         if (PreferenceUtils.isFirstTimeLaungh(getBaseContext())) {
             CommonUtils.clearPreferencesTopics(getBaseContext());
@@ -56,7 +56,7 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
             case Constanst.TAG_API_GET_FULL_INFO:
                 ((TextView) findViewById(R.id.test)).setText(result.toString());
                 // Save JSON from server to Internal Files
-                FullTopics fullTopics = new FullTopics(getBaseContext(), (JSONArray) result);
+                FullTopics fullTopics = new FullTopics(getBaseContext(), (JSONArray)     result);
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 finish();
                 break;
