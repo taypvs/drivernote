@@ -44,9 +44,6 @@ public class MainActivity extends BaseActivity{
         topicGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Intent intent = new Intent(MainActivity.this, ListSubTopicActivity.class);
-//                intent.putExtra("KEY_TOPIC", i);
-//                startActivity(intent);
                 startSubActivity(topics.get(i).type_name, i);
             }
         });
@@ -56,9 +53,7 @@ public class MainActivity extends BaseActivity{
         topics = new ArrayList<Topic>();
         try {
             for (int i = 0; i < Constanst.NUM_OF_TOPICS; i++) {
-//                Log.d("TayPVS","TayPVS - topic PreferenceUtils - " + PreferenceUtils.getString(getBaseContext(), PreferenceUtils.TOPIC_NUMBER + i));
                 JSONObject jsonObject = new JSONObject(PreferenceUtils.getString(getBaseContext(), PreferenceUtils.TOPIC_NUMBER + i));
-//                Log.d("TayPVS","TayPVS - topic - jsonObject " + jsonObject.toString());
                 Topic topic = JsonParseMachine.parseTopic(jsonObject);
                 topics.add(topic);
             }

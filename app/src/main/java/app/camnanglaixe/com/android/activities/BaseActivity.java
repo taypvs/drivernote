@@ -18,10 +18,10 @@ public class BaseActivity extends Activity {
         Intent intent = null;
         if(type.toLowerCase().equals(Constanst.TYPE_1)) { // Default Type
             intent = new Intent(getBaseContext(), ListSubTopicActivity.class);
-        } else if(type.equals(Constanst.TYPE_2)){ // Image Signal type
-            intent = new Intent(getBaseContext(), ListSignActivity.class);
-        } else if(type.equals(Constanst.TYPE_3)){ // HTML type
-
+        } else if(type.toLowerCase().equals(Constanst.TYPE_2)){ // Image Signal type
+            intent = new Intent(getBaseContext(), ListSubTopicActivity.class);
+        } else if(type.toLowerCase().equals(Constanst.TYPE_3)){ // HTML type
+            intent = new Intent(getBaseContext(), ListSubTopicActivity.class);
         }
         if(intent!=null) {
             intent.putExtra("KEY_TOPIC", i);
@@ -36,6 +36,9 @@ public class BaseActivity extends Activity {
         } else if(type.toLowerCase().equals(Constanst.TYPE_POST_2)){ // Definition List Type
             intent = new Intent(getBaseContext(), ContentDetailDefActivity.class);
         } else if(type.toLowerCase().equals(Constanst.TYPE_POST_3)){ // Image Signal List type
+            intent = new Intent(getBaseContext(), ListSignActivity.class);
+        } else if(type.toLowerCase().equals(Constanst.TYPE_POST_4)){ // Image Signal List type
+            intent = new Intent(getBaseContext(), ContentDetailPDFActivity.class);
         }
         if(intent!=null) {
             intent.putExtra("KEY_CONTENT", content);

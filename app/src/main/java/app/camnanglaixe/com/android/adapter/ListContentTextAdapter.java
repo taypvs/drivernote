@@ -71,7 +71,7 @@ public class ListContentTextAdapter extends BaseAdapter {
         holder.content.setText(Html.fromHtml(contentDetailRules.get(i).detail));
         if(contentDetailRules.get(i).image!=null&&!contentDetailRules.get(i).image.equals("")) {
             holder.image.setVisibility(View.VISIBLE);
-            holder.image.setImageDrawable(CommonUtils.getDrawableResourceByName(context, contentDetailRules.get(i).image));
+            holder.image.setImageDrawable(CommonUtils.getDrawableResourceByName(context, contentDetailRules.get(i).image.toLowerCase()));
         }
         return view;
     }

@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Cẩm nang lái xe</string>
+    <string name="app_name">Cẩm nang người lái xe</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="app_title">Ôn thi giấy phép A1</string>
+    <string name="app_title">Cẩm nang người lái xe</string>
 </resources>

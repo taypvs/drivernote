@@ -4,14 +4,15 @@ package app.camnanglaixe.com.android.Common;
  * Created by phamvietsontay on 11/27/16.
  */
 public class Constanst {
-    public static final int NUM_OF_TOPICS = 4;
-    public static final String TYPE_1 = "type 1"; // Default Text type
-    public static final String TYPE_2 = "type 2"; // Image Signal type
-    public static final String TYPE_3 = "type 3"; // HTML type
+    public static final int NUM_OF_TOPICS = 7;
+    public static final String TYPE_1 = "nhieuthongtin"; // Default Text type
+    public static final String TYPE_2 = "hinhanh"; // Image Signal type
+    public static final String TYPE_3 = "motthongtin"; // 1 Trang thong tin
 
-    public static final String TYPE_POST_1 = "post type 1"; // Default list text type
-    public static final String TYPE_POST_2 = "post type 2"; // Definition List Type
-    public static final String TYPE_POST_3 = "post type 3";// Image Signal List type
+    public static final String TYPE_POST_1 = "text"; // Default list text type
+    public static final String TYPE_POST_2 = "dinhnghia"; // Definition List Type
+    public static final String TYPE_POST_3 = "hinhanh";// Image Signal List type
+    public static final String TYPE_POST_4 = "pdf";// PDF type
 
     public static String GET = "GET";
     public static String POST = "POST";
@@ -29,5 +30,6 @@ public class Constanst {
     public static String FILE_NAME_JSON_TOPIC_PREFIX = "TOPIC_";
     public static String FILE_NAME_JSON_TOPIC_FORMAT = ".txt";
     public static String FILE_JSON_TEST = "InitialFile.txt";
-
+    public static final String FILE_DRIVER_DOWNLOAD_ROOT = "/camnanglaixe";
+    public static final String FILE_DRIVER_DOWNLOAD_MAIN_PDF = FILE_DRIVER_DOWNLOAD_ROOT + "/pdf";
 }
