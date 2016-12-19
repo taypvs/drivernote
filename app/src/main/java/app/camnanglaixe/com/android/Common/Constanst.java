@@ -32,4 +32,14 @@ public class Constanst {
     public static String FILE_JSON_TEST = "InitialFile.txt";
     public static final String FILE_DRIVER_DOWNLOAD_ROOT = "/camnanglaixe";
     public static final String FILE_DRIVER_DOWNLOAD_MAIN_PDF = FILE_DRIVER_DOWNLOAD_ROOT + "/pdf";
+
+    public static String HTML_STYLE_SUPPORT = "<style type=\"text/css\">\n" +
+            "\ttable {\n" +
+            "    border-collapse: collapse;\n" +
+            "}\n" +
+            "\n" +
+            "table, th, td {\n" +
+            "    border: 1px solid black;\n" +
+            "}\n" +
+            "</style>" ;
 }
