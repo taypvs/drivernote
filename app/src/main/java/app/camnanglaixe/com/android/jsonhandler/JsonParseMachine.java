@@ -42,8 +42,9 @@ public class JsonParseMachine {
         String id = jsonObject.optString("id","");
         String title = jsonObject.optString("title","");
         String type_name = jsonObject.optString("type_name","");
+        String category_id = jsonObject.optString("category_id", "");
         JSONArray contentArray = jsonObject.optJSONArray("content");
-        SubTopicObject newSubTopic = new SubTopicObject(id, title, type_name, contentArray);
+        SubTopicObject newSubTopic = new SubTopicObject(id, title, type_name, category_id, contentArray);
 
         return newSubTopic;
     }

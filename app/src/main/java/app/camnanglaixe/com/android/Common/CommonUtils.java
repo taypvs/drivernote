@@ -77,10 +77,15 @@ public class CommonUtils {
     }
 
     public static Drawable getDrawableResourceByName(Context context, String fileName) {
-        if (android.os.Build.VERSION.SDK_INT <= android.os.Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1) {
-            return context.getResources().getDrawable(context.getResources().getIdentifier(fileName, "drawable", context.getPackageName()));
-        } else {
-            return context.getResources().getDrawable(context.getResources().getIdentifier(fileName, "drawable", context.getPackageName()), null);
+        try {
+            if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.LOLLIPOP_MR1) {
+                return context.getResources().getDrawable(context.getResources().getIdentifier(fileName, "drawable", context.getPackageName()));
+            } else {
+                return context.getResources().getDrawable(context.getResources().getIdentifier(fileName, "drawable", context.getPackageName()), null);
+            }
+        }catch (NoSuchMethodError e){
+            e.printStackTrace();
+            return null;
         }
     }
 

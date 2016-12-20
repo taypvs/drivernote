@@ -13,12 +13,15 @@ public class SubTopicObject {
     public String id;
     public String title;
     public String type_name;
+    public String category_id;
     public List<ContentDetailRule> content;
 
-    public SubTopicObject(String id, String title, String type_name, JSONArray contentArray){
+
+    public SubTopicObject(String id, String title, String type_name, String category_id, JSONArray contentArray){
         this.id = id;
         this.title = title;
         this.type_name = type_name;
+        this.category_id = category_id;
         content = new ArrayList<ContentDetailRule>();
         try {
             for (int i = 0; i < contentArray.length(); i++) {

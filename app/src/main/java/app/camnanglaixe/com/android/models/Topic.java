@@ -6,6 +6,8 @@ import org.json.JSONException;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.camnanglaixe.com.android.Common.Constanst;
+
 /**
  * Created by taypham on 29/11/2016.
  */
@@ -16,6 +18,7 @@ public class Topic {
     public String icon;
     public String version;
     public List<SubTopicObject> small_topic;
+    public List<SubTopicObject> small_topicND;
 
     public Topic(String id, String type_name, String name, String icon, String version, JSONArray subTitleArray){
         this.id = id;
@@ -24,14 +27,24 @@ public class Topic {
         this.icon = icon;
         this.version = version;
         small_topic = new ArrayList<SubTopicObject>();
+        small_topicND = new ArrayList<SubTopicObject>();
         try {
             for (int i = 0; i < subTitleArray.length(); i++) {
                 String subTopicId = subTitleArray.getJSONObject(i).optString("id");
                 String subTopicTitle = subTitleArray.getJSONObject(i).optString("title");
                 String subType = subTitleArray.getJSONObject(i).optString("type_name");
+                String category_id = subTitleArray.getJSONObject(i).optString("category_id", "");
                 JSONArray contentArray = subTitleArray.getJSONObject(i).optJSONArray("content");
-                SubTopicObject newSubTopic = new SubTopicObject(subTopicId, subTopicTitle, subType, contentArray);
-                small_topic.add(newSubTopic);
+                SubTopicObject newSubTopic = new SubTopicObject(subTopicId, subTopicTitle, subType, category_id,contentArray);
+                if(name.contains("xu phat")){
+                    if(subType.equals(Constanst.TYPE_POST_4))
+                        small_topicND.add(newSubTopic);
+                    else
+                        small_topic.add(newSubTopic);
+                }
+                else {
+                    small_topic.add(newSubTopic);
+                }
             }
         }catch (JSONException e){
 
