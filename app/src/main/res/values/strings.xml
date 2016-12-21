@@ -4,4 +4,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="app_title">Cẩm nang người lái xe</string>
+    <string name="nghi_dinh_bon_sau">NGHỊ ĐỊNH 46</string>
+    <string name="tham_quyen_xu_phat">THẨM QUYỀN XỬ PHẠT</string>
 </resources>

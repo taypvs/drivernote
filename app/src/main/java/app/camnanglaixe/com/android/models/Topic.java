@@ -1,5 +1,7 @@
 package app.camnanglaixe.com.android.models;
 
+import android.util.Log;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 
@@ -36,8 +38,9 @@ public class Topic {
                 String category_id = subTitleArray.getJSONObject(i).optString("category_id", "");
                 JSONArray contentArray = subTitleArray.getJSONObject(i).optJSONArray("content");
                 SubTopicObject newSubTopic = new SubTopicObject(subTopicId, subTopicTitle, subType, category_id,contentArray);
-                if(name.contains("xu phat")){
-                    if(subType.equals(Constanst.TYPE_POST_4))
+                if(name.toLowerCase().contains("xử phạt")){
+                    Log.d("TayPVS", "TayPVS - Type : " + subType.toLowerCase());
+                    if(subType.toLowerCase().equals(Constanst.TYPE_POST_4))
                         small_topicND.add(newSubTopic);
                     else
                         small_topic.add(newSubTopic);
@@ -45,6 +48,22 @@ public class Topic {
                 else {
                     small_topic.add(newSubTopic);
                 }
+            }
+        }catch (JSONException e){
+
+        }
+    }
+
+    public void addSubtopicND(JSONArray subTitleArray){
+        try {
+            for (int i = 0; i < subTitleArray.length(); i++) {
+                String subTopicId = subTitleArray.getJSONObject(i).optString("id");
+                String subTopicTitle = subTitleArray.getJSONObject(i).optString("title");
+                String subType = subTitleArray.getJSONObject(i).optString("type_name");
+                String category_id = subTitleArray.getJSONObject(i).optString("category_id", "");
+                JSONArray contentArray = subTitleArray.getJSONObject(i).optJSONArray("content");
+                SubTopicObject newSubTopic = new SubTopicObject(subTopicId, subTopicTitle, subType, category_id,contentArray);
+                small_topicND.add(newSubTopic);
             }
         }catch (JSONException e){
 

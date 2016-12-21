@@ -44,7 +44,10 @@ public class MainActivity extends BaseActivity{
         topicGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                startSubActivity(topics.get(i).type_name, i);
+                boolean isTopicXuphat = false;
+                if(topics.get(i).name.toLowerCase().contains("xử phạt"))
+                    isTopicXuphat = true;
+                startSubActivity(topics.get(i).type_name, isTopicXuphat, i);
             }
         });
     }

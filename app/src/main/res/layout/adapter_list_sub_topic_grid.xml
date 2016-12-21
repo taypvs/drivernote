@@ -2,26 +2,34 @@
     android:id="@+id/topic_tab_layout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:background="@color/main_bg_color"
+    android:padding="20dp">
 
-    <TextView
-        android:id="@+id/sub_topic_name"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/text_size_2"
-        android:layout_centerVertical="true"
-        android:layout_alignParentLeft="true"
-        android:paddingRight="10dp"
-        android:layout_toLeftOf="@+id/icon_arrow"
-        />
+        android:background="@color/white"
+        android:padding="20dp">
 
-    <ImageView
-        android:id="@+id/icon_arrow"
-        android:layout_width="wrap_content"
-        android:layout_height="10dp"
-        android:scaleType="centerInside"
-        android:layout_centerVertical="true"
-        android:src="@drawable/small_arrow_right"
-        android:layout_alignParentRight="true"/>
+        <ImageView
+            android:id="@+id/icon_doc"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:src="@drawable/icon_document" />
 
+
+        <TextView
+            android:id="@+id/sub_topic_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/icon_doc"
+            android:textSize="@dimen/text_size_2" />
+
+    </RelativeLayout>
 </RelativeLayout>

@@ -1,6 +1,7 @@
 package app.camnanglaixe.com.android.jsonhandler;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import app.camnanglaixe.com.android.models.SubTopicObject;
@@ -35,6 +36,12 @@ public class JsonParseMachine {
         String icon = jsonObject.optString("icon","");
         String type_name = jsonObject.optString("type_name","");
         newTopic = new Topic(id, type_name, name, icon, version, jsonObject.optJSONArray("small_topic"));
+        try {
+            if (jsonObject.getJSONArray("small_topicND") != null)
+                newTopic.addSubtopicND(jsonObject.optJSONArray("small_topicND"));
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
         return newTopic;
     }
 

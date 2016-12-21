@@ -14,10 +14,13 @@ public class BaseActivity extends Activity {
 
     }
 
-    protected void startSubActivity(String type, int i){
+    protected void startSubActivity(String type, boolean isSpecialGrid, int i){
         Intent intent = null;
         if(type.toLowerCase().equals(Constanst.TYPE_1)) { // Default Type
-            intent = new Intent(getBaseContext(), ListSubTopicActivity.class);
+            if(isSpecialGrid)
+                intent = new Intent(getBaseContext(), ListSubTopicGridActivity.class);
+            else
+                intent = new Intent(getBaseContext(), ListSubTopicActivity.class);
         } else if(type.toLowerCase().equals(Constanst.TYPE_2)){ // Image Signal type
             intent = new Intent(getBaseContext(), ListSubTopicActivity.class);
         } else if(type.toLowerCase().equals(Constanst.TYPE_3)){ // HTML type
@@ -37,7 +40,7 @@ public class BaseActivity extends Activity {
             intent = new Intent(getBaseContext(), ContentDetailDefActivity.class);
         } else if(type.toLowerCase().equals(Constanst.TYPE_POST_3)){ // Image Signal List type
             intent = new Intent(getBaseContext(), ListSignActivity.class);
-        } else if(type.toLowerCase().equals(Constanst.TYPE_POST_4)){ // Image Signal List type
+        } else if(type.toLowerCase().equals(Constanst.TYPE_POST_4)){ // PDF type
             intent = new Intent(getBaseContext(), ContentDetailPDFActivity.class);
         }
         if(intent!=null) {

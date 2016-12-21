@@ -45,6 +45,10 @@
             android:name="app.camnanglaixe.com.android.activities.ContentDetailPDFActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"></activity>
+        <activity
+            android:name="app.camnanglaixe.com.android.activities.ListSubTopicGridActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
