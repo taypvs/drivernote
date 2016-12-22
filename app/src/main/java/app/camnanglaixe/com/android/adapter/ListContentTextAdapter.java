@@ -1,7 +1,6 @@
 package app.camnanglaixe.com.android.adapter;
 
 import android.content.Context;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +8,8 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import org.sufficientlysecure.htmltextview.HtmlTextView;
 
 import java.util.List;
 
@@ -53,7 +54,7 @@ public class ListContentTextAdapter extends BaseAdapter {
             holder = new ViewHolder();
             view = mInflater.inflate(R.layout.adapter_list_content_text, null);
             holder.title = (TextView) view.findViewById(R.id.content_title);
-            holder.content = (TextView) view.findViewById(R.id.content_txt);
+            holder.content = (HtmlTextView) view.findViewById(R.id.content_txt);
             holder.image = (ImageView) view.findViewById(R.id.content_image);
             holder.titleLayout = (RelativeLayout) view.findViewById(R.id.content_title_layout);
             view.setTag(holder);
@@ -68,7 +69,8 @@ public class ListContentTextAdapter extends BaseAdapter {
         else{
             holder.titleLayout.setVisibility(View.GONE);
         }
-        holder.content.setText(Html.fromHtml(contentDetailRules.get(i).detail));
+//        holder.content.setText(Html.fromHtml(contentDetailRules.get(i).detail));
+        holder.content.setHtml(contentDetailRules.get(i).detail);
         if(contentDetailRules.get(i).image!=null&&!contentDetailRules.get(i).image.equals("")) {
             holder.image.setVisibility(View.VISIBLE);
             holder.image.setImageDrawable(CommonUtils.getDrawableResourceByName(context, contentDetailRules.get(i).image.trim().toLowerCase()));
@@ -78,7 +80,7 @@ public class ListContentTextAdapter extends BaseAdapter {
 
     class ViewHolder {
         TextView title;
-        TextView content;
+        HtmlTextView content;
         ImageView image;
         RelativeLayout titleLayout;
     }

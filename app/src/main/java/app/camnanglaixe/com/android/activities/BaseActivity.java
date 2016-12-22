@@ -2,8 +2,16 @@ package app.camnanglaixe.com.android.activities;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.util.Log;
+
+import com.google.gson.Gson;
+
+import org.json.JSONObject;
 
 import app.camnanglaixe.com.android.Common.Constanst;
+import app.camnanglaixe.com.android.Common.PreferenceUtils;
+import app.camnanglaixe.com.android.jsonhandler.JsonParseMachine;
+import app.camnanglaixe.com.android.models.Topic;
 
 /**
  * Created by taypham on 30/11/2016.
@@ -23,8 +31,17 @@ public class BaseActivity extends Activity {
                 intent = new Intent(getBaseContext(), ListSubTopicActivity.class);
         } else if(type.toLowerCase().equals(Constanst.TYPE_2)){ // Image Signal type
             intent = new Intent(getBaseContext(), ListSubTopicActivity.class);
-        } else if(type.toLowerCase().equals(Constanst.TYPE_3)){ // HTML type
-            intent = new Intent(getBaseContext(), ListSubTopicActivity.class);
+        } else if(type.toLowerCase().equals(Constanst.TYPE_3)){ // 1 Trang thong tin
+            try {
+                JSONObject jsonObject = new JSONObject(PreferenceUtils.getString(getBaseContext(), PreferenceUtils.TOPIC_NUMBER + i));
+                Log.d("TayPVS", "TayPVS - subtopic - jsonObject " + jsonObject.toString());
+                Topic currentTopic = JsonParseMachine.parseTopic(jsonObject);
+                Gson gson = new Gson();
+                String json = gson.toJson(currentTopic.small_topic.get(0));
+                startContentActivity(Constanst.TYPE_POST_1, json);
+            } catch (Exception e){
+                e.printStackTrace();
+            }
         }
         if(intent!=null) {
             intent.putExtra("KEY_TOPIC", i);

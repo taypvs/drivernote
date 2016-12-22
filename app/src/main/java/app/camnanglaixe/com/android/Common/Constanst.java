@@ -4,7 +4,7 @@ package app.camnanglaixe.com.android.Common;
  * Created by phamvietsontay on 11/27/16.
  */
 public class Constanst {
-    public static final int NUM_OF_TOPICS = 7;
+    public static final int NUM_OF_TOPICS = 9;
     public static final String TYPE_1 = "nhieuthongtin"; // Default Text type
     public static final String TYPE_2 = "hinhanh"; // Image Signal type
     public static final String TYPE_3 = "motthongtin"; // 1 Trang thong tin
@@ -33,13 +33,5 @@ public class Constanst {
     public static final String FILE_DRIVER_DOWNLOAD_ROOT = "/camnanglaixe";
     public static final String FILE_DRIVER_DOWNLOAD_MAIN_PDF = FILE_DRIVER_DOWNLOAD_ROOT + "/pdf";
 
-    public static String HTML_STYLE_SUPPORT = "<style type=\"text/css\">\n" +
-            "\ttable {\n" +
-            "    border-collapse: collapse;\n" +
-            "}\n" +
-            "\n" +
-            "table, th, td {\n" +
-            "    border: 1px solid black;\n" +
-            "}\n" +
-            "</style>" ;
+    public static String HTML_STYLE_SUPPORT = "<style type='text/css'>table {  border-collapse: collapse;} table, th, td { border: 1px solid black;}</style>" ;
 }
