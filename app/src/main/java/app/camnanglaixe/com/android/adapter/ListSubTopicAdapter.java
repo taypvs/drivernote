@@ -54,7 +54,7 @@ public class ListSubTopicAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
 
-        holder.name.setText(subTopics.get(i).title);
+        holder.name.setText(subTopics.get(i).title.trim().toUpperCase());
         return view;
     }
 

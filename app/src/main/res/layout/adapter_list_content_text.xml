@@ -1,8 +1,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/topic_tab_layout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
     android:clickable="false">
 
     <RelativeLayout
@@ -45,14 +46,14 @@
             android:id="@+id/content_txt"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
+            android:textColor="@color/main_text_color_2"
             android:padding="5dp"
             android:textSize="@dimen/text_size_3" />
 
         <WebView
             android:id="@+id/content_webview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="700dp"
             android:visibility="gone"
             android:padding="5dp"
             />

@@ -4,7 +4,7 @@ package app.camnanglaixe.com.android.Common;
  * Created by phamvietsontay on 11/27/16.
  */
 public class Constanst {
-    public static final int NUM_OF_TOPICS = 9;
+    public static final int NUM_OF_TOPICS = 10;
     public static final String TYPE_1 = "nhieuthongtin"; // Default Text type
     public static final String TYPE_2 = "hinhanh"; // Image Signal type
     public static final String TYPE_3 = "motthongtin"; // 1 Trang thong tin

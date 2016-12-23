@@ -10,8 +10,8 @@
     <color name="bg_content_gray">#E6E6E6</color>
 
     <!-- Grid Main Tab Color  -->
-    <color name="main_0">#f4cbb7</color>
-    <color name="main_1">#016ca0</color>
+    <color name="main_0">#f2e86d</color>
+    <color name="main_1">#574d68</color>
     <color name="main_2">#f4cbb7</color>
     <color name="main_3">#016ca0</color>
     <color name="main_4">#89d4a9</color>
@@ -22,8 +22,8 @@
     <color name="main_9">#846a6a</color>
 
     <!-- Grid Main Tab Color Clicked -->
-    <color name="main_0_clicked">#f9d0cb</color>
-    <color name="main_1_clicked">#116daf</color>
+    <color name="main_0_clicked">#f2ea8f</color>
+    <color name="main_1_clicked">#574f8a</color>
     <color name="main_2_clicked">#f9d0cb</color>
     <color name="main_3_clicked">#116daf</color>
     <color name="main_4_clicked">#aad6ba</color>
@@ -34,4 +34,7 @@
     <color name="main_9_clicked">#aa6b7b</color>
 
     <color name="main_bg_color">#ECF1F2</color>
+    <color name="bg_gray_light_color">#D8D8D8</color>
+    <color name="main_text_color_1">#A4A4A4</color>
+    <color name="main_text_color_2">#585858</color>
 </resources>
