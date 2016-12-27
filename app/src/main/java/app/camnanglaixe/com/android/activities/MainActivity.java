@@ -6,12 +6,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import app.camnanglaixe.com.android.Common.CommonUtils;
 import app.camnanglaixe.com.android.Common.Constanst;
 import app.camnanglaixe.com.android.Common.PreferenceUtils;
 import app.camnanglaixe.com.android.R;
@@ -25,6 +29,7 @@ public class MainActivity extends BaseActivity{
     private ListTopicAdapter listTopicAdapter;
     private List<Topic> topics;
     private GridView topicGridView;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +55,19 @@ public class MainActivity extends BaseActivity{
                 startSubActivity(topics.get(i).type_name, isTopicXuphat, i);
             }
         });
+
+        mAdView = (AdView) findViewById(R.id.adView);
+        if (CommonUtils.isOnline(getBaseContext())) {
+            mAdView.setVisibility(View.VISIBLE);
+            AdRequest adRequest = new AdRequest.Builder()
+                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
+                    .build();
+            mAdView.loadAd(adRequest);
+        }
+        else{
+            mAdView.setVisibility(View.GONE);
+        }
+
     }
 
     private void addTopics(){

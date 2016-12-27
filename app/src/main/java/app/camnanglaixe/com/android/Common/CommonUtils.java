@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Environment;
+import android.provider.Settings;
 import android.util.Log;
 
 import com.google.gson.Gson;
@@ -115,5 +116,22 @@ public class CommonUtils {
         else
             return Environment.getExternalStorageDirectory().getAbsolutePath()
                     + branch;
+    }
+
+    public static boolean isSavedTopics(Context context){
+        for(int i = 0; i < Constanst.NUM_OF_TOPICS; i++){
+            if(PreferenceUtils.getString(context, PreferenceUtils.TOPIC_NUMBER + i).equals("")){
+                Log.d("TayPVS", "TayPVS -  false" );
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static String getDeviceId(Context context){
+        String android_id = Settings.Secure.getString(context.getContentResolver(),
+                Settings.Secure.ANDROID_ID);
+        Log.d("TayPVS", "TayPVS - getDeviceId : " + android_id) ;
+        return android_id;
     }
 }

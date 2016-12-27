@@ -3,6 +3,7 @@ package app.camnanglaixe.com.android.activities;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -36,16 +37,37 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
     protected void init() {
         Log.d("TayPVS", "TayPVS - Splash");
         if (PreferenceUtils.isFirstTimeLaungh(getBaseContext())) {
-            CommonUtils.clearPreferencesTopics(getBaseContext());
+//            CommonUtils.clearPreferencesTopics(getBaseContext());
             if (CommonUtils.isOnline(getBaseContext())) {
                 loadAllws = new LoadFullJsonWebservice(this, this);
                 loadAllws.doLoadAPI();
             } else {
-                new LoadFileJsonTask().execute("");
+                if(CommonUtils.isSavedTopics(getBaseContext())){
+                    // Execute some code after 2 seconds have passed
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                            finish();
+                        }
+                    }, 3000);
+
+                }
+                else {
+                    Handler handler = new Handler();
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            new LoadFileJsonTask().execute("");
+                        }
+                    }, 3000);
+
+
+                }
             }
         } else {
-//            PreferenceUtils.saveFirstTimeLaungh(getBaseContext());
-
+//          PreferenceUtils.saveFirstTimeLaungh(getBaseContext());
         }
     }
 
@@ -56,7 +78,7 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
             case Constanst.TAG_API_GET_FULL_INFO:
                 ((TextView) findViewById(R.id.test)).setText(result.toString());
                 // Save JSON from server to Internal Files
-                FullTopics fullTopics = new FullTopics(getBaseContext(), (JSONArray)     result);
+                FullTopics fullTopics = new FullTopics(getBaseContext(), (JSONArray)result);
                 startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 finish();
                 break;
