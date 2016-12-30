@@ -38,6 +38,7 @@ public class ListSubTopicGridActivity extends BaseActivity {
     }
 
     protected void init(){
+        setBackBtnOnclick();
         if (getIntent().hasExtra("KEY_TOPIC")) {
             try {
                 key_topic = getIntent().getIntExtra("KEY_TOPIC", 0);

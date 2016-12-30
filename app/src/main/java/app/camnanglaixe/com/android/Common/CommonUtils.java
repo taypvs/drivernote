@@ -1,9 +1,11 @@
 package app.camnanglaixe.com.android.Common;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Environment;
 import android.provider.Settings;
 import android.util.Log;
@@ -133,5 +135,15 @@ public class CommonUtils {
                 Settings.Secure.ANDROID_ID);
         Log.d("TayPVS", "TayPVS - getDeviceId : " + android_id) ;
         return android_id;
+    }
+
+    public static void openWebPage(Context context, String url) {
+        Uri webpage = Uri.parse(url);
+        Log.d("TayPVS", "TayPVS - webpage : " + webpage.toString());
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        if (intent.resolveActivity(context.getPackageManager()) != null) {
+            context.startActivity(intent);
+        }
     }
 }

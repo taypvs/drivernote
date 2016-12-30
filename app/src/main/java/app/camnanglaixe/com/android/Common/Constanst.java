@@ -8,11 +8,13 @@ public class Constanst {
     public static final String TYPE_1 = "nhieuthongtin"; // Default Text type
     public static final String TYPE_2 = "hinhanh"; // Image Signal type
     public static final String TYPE_3 = "motthongtin"; // 1 Trang thong tin
+    public static final String TYPE_4 = "url"; // 1 Trang thong tin
 
     public static final String TYPE_POST_1 = "text"; // Default list text type
     public static final String TYPE_POST_2 = "dinhnghia"; // Definition List Type
     public static final String TYPE_POST_3 = "hinhanh";// Image Signal List type
     public static final String TYPE_POST_4 = "pdf";// PDF type
+    public static final String TYPE_POST_5 = "url";// PDF type
 
     public static String GET = "GET";
     public static String POST = "POST";

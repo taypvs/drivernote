@@ -3,6 +3,7 @@ package app.camnanglaixe.com.android.activities;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
+import android.view.View;
 
 import com.google.gson.Gson;
 
@@ -10,13 +11,14 @@ import org.json.JSONObject;
 
 import app.camnanglaixe.com.android.Common.Constanst;
 import app.camnanglaixe.com.android.Common.PreferenceUtils;
+import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.jsonhandler.JsonParseMachine;
 import app.camnanglaixe.com.android.models.Topic;
 
 /**
  * Created by taypham on 30/11/2016.
  */
-public class BaseActivity extends Activity {
+public class BaseActivity extends Activity implements View.OnClickListener{
 
     protected void init(){
 
@@ -59,6 +61,8 @@ public class BaseActivity extends Activity {
             intent = new Intent(getBaseContext(), ListSignActivity.class);
         } else if(type.toLowerCase().equals(Constanst.TYPE_POST_4)){ // PDF type
             intent = new Intent(getBaseContext(), ContentDetailPDFActivity.class);
+        } else if(type.toLowerCase().equals(Constanst.TYPE_POST_5)){ // Url type
+            intent = new Intent(getBaseContext(), ContentDetailUrlActivity.class);
         }
         if(intent!=null) {
             intent.putExtra("KEY_CONTENT", content);
@@ -66,4 +70,25 @@ public class BaseActivity extends Activity {
         }
     }
 
+    public void setBackBtnOnclick(){
+        findViewById(R.id.back_btn).setVisibility(View.VISIBLE);
+        findViewById(R.id.back_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.back_btn:
+                Log.d("TayPVS", "TayPVS - Back");
+                finish();
+                break;
+            default:
+                break;
+        }
+    }
 }

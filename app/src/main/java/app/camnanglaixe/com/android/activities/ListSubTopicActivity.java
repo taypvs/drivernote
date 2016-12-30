@@ -34,6 +34,7 @@ public class ListSubTopicActivity extends BaseActivity {
     }
 
     protected void init(){
+        setBackBtnOnclick();
         if (getIntent().hasExtra("KEY_TOPIC")) {
             try {
                 int i = getIntent().getIntExtra("KEY_TOPIC", 0);

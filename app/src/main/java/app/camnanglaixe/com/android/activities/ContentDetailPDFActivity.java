@@ -47,6 +47,7 @@ public class ContentDetailPDFActivity extends BaseActivity {
     }
 
     protected void init() {
+        setBackBtnOnclick();
         if (getIntent().hasExtra("KEY_CONTENT")) {
             try {
                 String json = getIntent().getStringExtra("KEY_CONTENT");
