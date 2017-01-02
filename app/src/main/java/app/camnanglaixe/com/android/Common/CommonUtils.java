@@ -2,6 +2,7 @@ package app.camnanglaixe.com.android.Common;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -89,6 +90,9 @@ public class CommonUtils {
         }catch (NoSuchMethodError e){
             e.printStackTrace();
             return null;
+        }catch (Resources.NotFoundException e){
+            e.printStackTrace();
+            return null;
         }
     }
 
@@ -144,6 +148,18 @@ public class CommonUtils {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         if (intent.resolveActivity(context.getPackageManager()) != null) {
             context.startActivity(intent);
+        }
+    }
+
+    public static void clearFolderApp(){
+        File dir = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + Constanst.FILE_DRIVER_DOWNLOAD_MAIN_PDF);
+        if (dir.isDirectory())
+        {
+            String[] children = dir.list();
+            for (int i = 0; i < children.length; i++)
+            {
+                new File(dir, children[i]).delete();
+            }
         }
     }
 }

@@ -38,6 +38,8 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
         Log.d("TayPVS", "TayPVS - Splash");
         if (PreferenceUtils.isFirstTimeLaungh(getBaseContext())) {
 //            CommonUtils.clearPreferencesTopics(getBaseContext());
+
+            CommonUtils.clearFolderApp();
             if (CommonUtils.isOnline(getBaseContext())) {
                 loadAllws = new LoadFullJsonWebservice(this, this);
                 loadAllws.doLoadAPI();

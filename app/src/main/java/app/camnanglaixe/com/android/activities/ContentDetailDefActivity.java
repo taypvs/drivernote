@@ -2,6 +2,7 @@ package app.camnanglaixe.com.android.activities;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 
 import org.json.JSONException;
@@ -45,6 +46,14 @@ public class ContentDetailDefActivity extends BaseActivity {
         listContentDefAdapter = new ListContentDefAdapter(getBaseContext(), currentSubTopic.content);
         listContentView.setAdapter(listContentDefAdapter);
         listContentDefAdapter.notifyDataSetChanged();
+
+        findViewById(R.id.up_btn).setVisibility(View.VISIBLE);
+        findViewById(R.id.up_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listContentView.setSelectionAfterHeaderView();
+            }
+        });
     }
 
 }

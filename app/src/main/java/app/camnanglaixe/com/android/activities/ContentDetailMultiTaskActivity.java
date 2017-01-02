@@ -2,7 +2,12 @@ package app.camnanglaixe.com.android.activities;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.text.Html;
 import android.util.Log;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -16,6 +21,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,23 +31,28 @@ import app.camnanglaixe.com.android.Common.CommonUtils;
 import app.camnanglaixe.com.android.Common.Constanst;
 import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.jsonhandler.JsonParseMachine;
+import app.camnanglaixe.com.android.models.ContentDetailRule;
 import app.camnanglaixe.com.android.models.SubTopicObject;
 
 /**
  * Created by taypham on 16/12/2016.
  */
-public class ContentDetailPDFActivity extends BaseActivity {
+public class ContentDetailMultiTaskActivity extends BaseActivity {
     private RelativeLayout pdfView;
-    private SubTopicObject currentSubTopic;
+    private LinearLayout contentView;
+    private ContentDetailRule currentContent;
     private MuPDFCore core;
     private MuPDFReaderView mDocview;
+    private TextView detailText;
+    private ImageView imageView;
+    private TextView titleTv;
     private String mFilePath;
     private String linkPDF;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_content_pdf);
+        setContentView(R.layout.activity_content_multi_task);
 
         init();
     }
@@ -53,46 +64,20 @@ public class ContentDetailPDFActivity extends BaseActivity {
                 String json = getIntent().getStringExtra("KEY_CONTENT");
                 JSONObject jsonObject = new JSONObject(json);
                 Log.d("TayPVS", "TayPVS - subtopic - jsonObject " + jsonObject.toString());
-                currentSubTopic = JsonParseMachine.parseSubTopic(jsonObject);
+                currentContent = JsonParseMachine.parseContent(jsonObject);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
         }
 
-        ((TextView) findViewById(R.id.title)).setText(currentSubTopic.title);
+        ((TextView) findViewById(R.id.title)).setText(currentContent.title);
         pdfView = (RelativeLayout) findViewById(R.id.content_pdf_view);
+        contentView = (LinearLayout) findViewById(R.id.content_text_view);
 
-        if(currentSubTopic.content.size()>0) {
-            mFilePath = CommonUtils.createFilePath(currentSubTopic.content.get(0).image + ".pdf", Constanst.FILE_DRIVER_DOWNLOAD_MAIN_PDF, true);
-            File pdfFile = new File(mFilePath);
-            if (!pdfFile.exists()) {
-                new copyPdfFromAsset().execute();
-            } else {
-                Log.d("TayPVS", "TayPVS - mFilePath " + mFilePath);
-                core = openFile(CommonUtils.createFilePath(currentSubTopic.content.get(0).image + ".pdf", Constanst.FILE_DRIVER_DOWNLOAD_MAIN_PDF, true));
-                if (core != null && core.countPages() == 0) {
-                    core = null;
-                }
-                if (core == null || core.countPages() == 0 || core.countPages() == -1) {
-                    Log.d("TayPVS", " TayPVSDocument Not Opening");
-                    return;
-                }
-                if (core != null) {
-                    mDocview = new MuPDFReaderView(this) {
-                        @Override
-                        protected void onMoveToChild(int i) {
-                            if (core == null)
-                                return;
-                            super.onMoveToChild(i);
-                        }
-
-                    };
-
-                    mDocview.setAdapter(new MuPDFPageAdapter(this, core));
-                    pdfView.addView(mDocview);
-                }
-            }
-
+        if(currentContent.detail.equals("")){
+            initPDF();
+        } else {
+            initContentText();
         }
 
     }
@@ -136,20 +121,19 @@ public class ContentDetailPDFActivity extends BaseActivity {
         @Override
         protected String doInBackground(String... f_url) {
             try {
-                mPdfFile = new File(CommonUtils.createFilePath(currentSubTopic.content.get(0).image+".pdf", Constanst.FILE_DRIVER_DOWNLOAD_MAIN_PDF, false));
-                mPdfFile.mkdirs();
                 try {
-                    InputStream is = getAssets().open(currentSubTopic.content.get(0).image + ".pdf");
+                    InputStream is = getAssets().open(currentContent.image + ".pdf");
                     int size = is.available();
                     byte[] buffer = new byte[size];
                     is.read(buffer);
                     is.close();
 
-
-                    FileOutputStream fos = new FileOutputStream(CommonUtils.createFilePath(currentSubTopic.content.get(0).image+".pdf", Constanst.FILE_DRIVER_DOWNLOAD_MAIN_PDF, true));
+                    mPdfFile = new File(CommonUtils.createFilePath(currentContent.image+".pdf", Constanst.FILE_DRIVER_DOWNLOAD_MAIN_PDF, false));
+                    mPdfFile.mkdirs();
+                    FileOutputStream fos = new FileOutputStream(CommonUtils.createFilePath(currentContent.image+".pdf", Constanst.FILE_DRIVER_DOWNLOAD_MAIN_PDF, true));
                     fos.write(buffer);
                     fos.close();
-                } catch (Exception e) {
+                } catch (FileNotFoundException e) {
                     throw new RuntimeException(e);
                 }
 
@@ -175,13 +159,10 @@ public class ContentDetailPDFActivity extends BaseActivity {
                     output.close();
                 if (input != null)
                     input.close();
-            } catch (IOException ignored) {
-            }
-            try
-            {
+
                 Gson gson = new Gson();
-                String json = gson.toJson(currentSubTopic);
-                startContentActivity(Constanst.TYPE_POST_4, json);
+                String json = gson.toJson(currentContent);
+                startContentAdvance(json);
                 finish();
             }
             catch (Exception e)
@@ -191,4 +172,56 @@ public class ContentDetailPDFActivity extends BaseActivity {
         }
     }
 
+    private void initPDF(){
+        contentView.setVisibility(View.GONE);
+        pdfView.setVisibility(View.VISIBLE);
+        mFilePath = CommonUtils.createFilePath(currentContent.image+".pdf", Constanst.FILE_DRIVER_DOWNLOAD_MAIN_PDF, true);
+        File pdfFile = new File(mFilePath);
+        if (!pdfFile.exists()) {
+            new copyPdfFromAsset().execute();
+        }
+        else {
+            Log.d("TayPVS", "TayPVS - mFilePath " + mFilePath);
+            core = openFile(CommonUtils.createFilePath(currentContent.image+".pdf", Constanst.FILE_DRIVER_DOWNLOAD_MAIN_PDF, true));
+            if (core != null && core.countPages() == 0) {
+                core = null;
+            }
+            if (core == null || core.countPages() == 0 || core.countPages() == -1) {
+                Log.d("TayPVS", " TayPVSDocument Not Opening");
+                return;
+            }
+            if (core != null) {
+                mDocview = new MuPDFReaderView(this) {
+                    @Override
+                    protected void onMoveToChild(int i) {
+                        if (core == null)
+                            return;
+                        super.onMoveToChild(i);
+                    }
+
+                };
+
+                mDocview.setAdapter(new MuPDFPageAdapter(this, core));
+                pdfView.addView(mDocview);
+            }
+        }
+    }
+
+    private void initContentText(){
+        contentView.setVisibility(View.VISIBLE);
+        pdfView.setVisibility(View.GONE);
+        detailText = (TextView) findViewById(R.id.content_text);
+        titleTv = (TextView) findViewById(R.id.content_title);
+        imageView = (ImageView) findViewById(R.id.content_image);
+        detailText.setText(Html.fromHtml(currentContent.detail));
+
+        titleTv.setText(currentContent.title);
+        if(currentContent.image!=null&&!currentContent.image.equals("")){
+            imageView.setVisibility(View.VISIBLE);
+            if(CommonUtils.getDrawableResourceByName(getBaseContext(), currentContent.image.trim().toLowerCase())!=null) {
+                imageView.setVisibility(View.VISIBLE);
+                imageView.setImageDrawable(CommonUtils.getDrawableResourceByName(getBaseContext(), currentContent.image.trim().toLowerCase()));
+            }
+        }
+    }
 }

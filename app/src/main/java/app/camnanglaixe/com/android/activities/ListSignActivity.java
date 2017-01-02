@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -51,6 +52,13 @@ public class ListSignActivity extends BaseActivity {
         listContentSignAdapter = new ListContentSignAdapter(this, currentSubTopic.content);
         listSignView.setAdapter(listContentSignAdapter);
 
+        findViewById(R.id.up_btn).setVisibility(View.VISIBLE);
+        findViewById(R.id.up_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listSignView.setSelectionAfterHeaderView();
+            }
+        });
     }
 
     public void showDialogContent(String title, String message) {

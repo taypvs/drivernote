@@ -2,6 +2,7 @@ package app.camnanglaixe.com.android.activities;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -48,9 +49,18 @@ public class ContentDetailTextActivity extends BaseActivity {
         listContentTextAdapter = new ListContentTextAdapter(getBaseContext(), currentSubTopic.content);
         contentListview.setAdapter(listContentTextAdapter);
         listContentTextAdapter.notifyDataSetChanged();
+
+        findViewById(R.id.up_btn).setVisibility(View.VISIBLE);
+        findViewById(R.id.up_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contentListview.setSelectionAfterHeaderView();
+            }
+        });
     }
 
     public void onDestroy() {
         super.onDestroy();
     }
+
 }

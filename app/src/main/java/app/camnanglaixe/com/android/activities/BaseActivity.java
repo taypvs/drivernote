@@ -63,11 +63,19 @@ public class BaseActivity extends Activity implements View.OnClickListener{
             intent = new Intent(getBaseContext(), ContentDetailPDFActivity.class);
         } else if(type.toLowerCase().equals(Constanst.TYPE_POST_5)){ // Url type
             intent = new Intent(getBaseContext(), ContentDetailUrlActivity.class);
+        } else if(type.toLowerCase().equals(Constanst.TYPE_POST_6)){ // Multi type
+            intent = new Intent(getBaseContext(), ContentDetailListActivity.class);
         }
         if(intent!=null) {
             intent.putExtra("KEY_CONTENT", content);
             startActivity(intent);
         }
+    }
+
+    protected void startContentAdvance(String content){
+        Intent intent = new Intent(getBaseContext(), ContentDetailMultiTaskActivity.class);
+        intent.putExtra("KEY_CONTENT", content);
+        startActivity(intent);
     }
 
     public void setBackBtnOnclick(){

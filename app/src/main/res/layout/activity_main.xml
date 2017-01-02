@@ -18,6 +18,8 @@
             android:horizontalSpacing="1dp"
             android:numColumns="2"
             android:padding="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_above="@+id/adView"
             android:verticalSpacing="1dp" />
 
         <com.google.android.gms.ads.AdView

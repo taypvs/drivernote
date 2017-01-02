@@ -4,6 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import app.camnanglaixe.com.android.models.ContentDetailRule;
 import app.camnanglaixe.com.android.models.SubTopicObject;
 import app.camnanglaixe.com.android.models.Topic;
 
@@ -54,5 +55,14 @@ public class JsonParseMachine {
         SubTopicObject newSubTopic = new SubTopicObject(id, title, type_name, category_id, contentArray);
 
         return newSubTopic;
+    }
+
+    public static ContentDetailRule parseContent(JSONObject jsonObject){
+        String title = jsonObject.optString("title","");
+        String detail = jsonObject.optString("detail","");
+        String image = jsonObject.optString("image", "");
+        ContentDetailRule newContent = new ContentDetailRule(title, detail, image);
+
+        return newContent;
     }
 }
