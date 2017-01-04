@@ -1,22 +1,14 @@
 package app.camnanglaixe.com.android.adapter;
 
 import android.content.Context;
-import android.text.Html;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView;
-import android.webkit.WebViewClient;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.List;
 
-import app.camnanglaixe.com.android.Common.CommonUtils;
 import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.models.ContentDetailRule;
 
@@ -62,7 +54,7 @@ public class ListContentAdapter extends BaseAdapter {
             holder = (ViewHolder) view.getTag();
         }
 
-        holder.title.setText(contentDetailRules.get(i).title);
+        holder.title.setText(contentDetailRules.get(i).title.toUpperCase());
         return view;
     }
 
