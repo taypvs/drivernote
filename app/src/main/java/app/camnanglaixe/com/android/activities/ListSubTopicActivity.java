@@ -7,11 +7,14 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.gson.Gson;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import app.camnanglaixe.com.android.Common.CommonUtils;
 import app.camnanglaixe.com.android.Common.PreferenceUtils;
 import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.adapter.ListSubTopicAdapter;
@@ -61,5 +64,17 @@ public class ListSubTopicActivity extends BaseActivity {
 //                overridePendingTransition(R.anim.slide_from_right, 0);
             }
         });
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        if (CommonUtils.isOnline(getBaseContext())) {
+            mAdView.setVisibility(View.VISIBLE);
+            AdRequest adRequest = new AdRequest.Builder()
+                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
+                    .build();
+            mAdView.loadAd(adRequest);
+        }
+        else{
+            mAdView.setVisibility(View.GONE);
+        }
     }
 }
