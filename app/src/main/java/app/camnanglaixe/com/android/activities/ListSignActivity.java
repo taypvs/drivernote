@@ -9,9 +9,13 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import app.camnanglaixe.com.android.Common.CommonUtils;
 import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.adapter.ListContentSignAdapter;
 import app.camnanglaixe.com.android.jsonhandler.JsonParseMachine;
@@ -59,6 +63,18 @@ public class ListSignActivity extends BaseActivity {
                 listSignView.setSelectionAfterHeaderView();
             }
         });
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        if (CommonUtils.isOnline(getBaseContext())) {
+            mAdView.setVisibility(View.VISIBLE);
+            AdRequest adRequest = new AdRequest.Builder()
+                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
+                    .build();
+            mAdView.loadAd(adRequest);
+        }
+        else{
+            mAdView.setVisibility(View.GONE);
+        }
     }
 
     public void showDialogContent(String title, String message) {

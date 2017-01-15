@@ -126,7 +126,7 @@
 "version": "1",
 "icon": "icon_main_he_thong_gplx",
 "position": "3",
-"count": "6",
+"count": "5",
 "type_name": "NhieuThongTin",
 "small_topic": [
 {
@@ -142,23 +142,6 @@
 "post_id": "3",
 "title": "THÔNG TIN CHUNG ",
 "detail": "<p>Tổng cục Đường bộ Việt Nam được Bộ Giao thông vận tải giao nhiệm vụ quản lý về sát hạch, cấp giấy phép lái xe trong phạm vi cả nước.</p>\r\n<p>Vụ Quản lý phương tiện và người lái thuộc Tổng cục Đường bộ Việt Nam thực hiện chức năng, nhiệm vụ của Ban Quản lý sát hạch Tổng cục.</p>\r\n<p>Sở Giao thông vận tải chịu trách nhiệm quản lý sát hạch, cấp giấy phép lái xe trong phạm vi tỉnh, thành phố trực thuộc Trung ương.</p>\r\n<p>Phòng được giao nhiệm vụ quản lý về đào tạo, sát hạch, cấp giấy phép lái xe thuộc Sở Giao thông vận tải thực hiện chức năng, nhiệm vụ của Ban Quản lý sát hạch Sở.</p>",
-"image": ""
-}
-]
-},
-{
-"id": "100",
-"title": "CƠ SỞ DẠY LÁI XE",
-"category_id": "5",
-"type_id": "1",
-"position": "2",
-"type_name": "Text",
-"content": [
-{
-"id": "924",
-"post_id": "100",
-"title": "THAI SON",
-"detail": "<p>dạy lái xe các hạng</p>",
 "image": ""
 }
 ]
@@ -5332,7 +5315,7 @@
 },
 {
 "id": "7",
-"name": "Thẩm Quyền Xử Phạt",
+"name": "Xử Phạt Lĩnh Vực GTĐB",
 "parent_id": null,
 "type_id": "1",
 "version": "1",
@@ -5343,7 +5326,7 @@
 "small_topic": [
 {
 "id": "64",
-"title": "Nghị định 46",
+"title": "Nghị định 46/2016",
 "category_id": "7",
 "type_id": "4",
 "position": "1",
@@ -6068,7 +6051,7 @@
 "version": "1",
 "icon": "icon_main_an_toan",
 "position": "6",
-"count": "4",
+"count": "3",
 "type_name": "NhieuThongTin",
 "small_topic": [
 {
@@ -6407,55 +6390,53 @@
 {
 "id": "925",
 "post_id": "95",
-"title": "03 nội dung về nhận biết rủi ro",
-"detail": "<p> <strong>Trong phần này, chúng tôi chỉ ra 03 nội dung chính để người lái xe có thể tự đánh giá những rủi ro mà các bạn thường gặp:</strong></p>\r\n<ol>\r\n<li><strong> Điểm mù, vùng mù, vùng không nhì thấy.</strong></li>\r\n<li><strong> Tốc độ và khoảng cách an toàn.</strong></li>\r\n<li><strong> Rượu, bia, chất kích thích khác</strong></li>\r\n</ol>\r\n<p><strong>Hãy xác định thêm những rủi ro, cách thức giải quyết chúng khi các bạn ngồi sau tay lái</strong></p>",
+"title": "Nội dung phần nhận biết rủi ro",
+"detail": "<p> <strong>Trong phần này, chúng tôi chỉ ra 03 nội dung chính để người lái xe có thể tự đánh giá những rủi ro mà các bạn thường gặp:</strong></p>\r\n<p><strong>. Điểm mù, vùng mù, vùng không nhì thấy.</strong></p>\r\n<p><strong>. Rượu, bia, chất kích thích khác.</strong></p>\r\n<p><strong>. Tốc độ và khoảng cách an toàn.</strong></p>\r\n<p><strong>Hãy xác định thêm những rủi ro, tìm cách thức giải quyết chúng trước khi các bạn ngồi sau tay lái.</strong></p>\r\n<p> </p>\r\n<p><strong> </strong></p>",
 "image": ""
 },
 {
 "id": "926",
 "post_id": "95",
-"title": "ĐIỂM MÙ",
-"detail": "<table width=\"1357\">\r\n<tbody>\r\n<tr>\r\n<td width=\"679\">\r\n<p><strong>ĐIỂM MÙ</strong></p>\r\n</td>\r\n<td width=\"679\">\r\n<p><strong>PHÒNG TRÁNH ĐIỂM MÙ</strong></p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"679\">\r\n<p>Đó chính là những điểm mà bạn không nhìn thấy qua gương chiếu hậu và ở bên trái, bên phải, phía sau ( xe Tải và SUVs ) hoặc những nơi bị khuất tầm nhìn.</p>\r\n</td>\r\n<td width=\"679\">\r\n<p>Bạn phải ở bên ngoài những điểm mù.    Nếu ở điểm mù hai bên hông thì áp dụng các cách thức như: chạy chậm lại hoặc nhanh chóng vượt qua điểm mù.</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"679\">\r\n<p>Hãy ghi nhớ rằng, phương tiện tham gia giao thông càng lớn thì điểm mù càng lớn, dù họ đã gắn thêm nhiều gương quan sát.</p>\r\n</td>\r\n<td width=\"679\">\r\n<p>Không chạy vào điểm mù sau xe tải, xe container, vì xe tải, xe container có thể thắng gấp không mong đợi bất cứ lúc nào.</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"679\">\r\n<p>Bạn phải nhận biết những điểm mù và phòng tránh rủi ro bằng cách không cho xe của mình chạy vào những điểm này.</p>\r\n</td>\r\n<td width=\"679\">\r\n<p>Hãy làm mọi cách để người lái xe khác thấy bạn (bấm kèn…), nếu bạn không nhìn thấy người lái xe trong gương chiếu hậu của họ thì họ cũng sẽ không nhìn thấy bạn.</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td width=\"679\">\r\n<p>Việc bạn cho xe của mình chạy vào những điểm mù, là chính bạn đã không cho người lái xe khác những cơ hội để tránh né xe của bạn, vì thế khả năng xãy ra va chạm.</p>\r\n</td>\r\n<td width=\"679\">\r\n<p>Ban đêm, bạn không được sử đèn pha ( đèn chiếu xa ), khi bạn phía sau xe tải nặng vì ánh sáng đèn sẽ làm “ điểm mù” cho người lái xe tải.</p>\r\n</td>\r\n</tr>\r\n<tr>\r\n<td colspan=\"2\" width=\"1357\">\r\n<p><strong>ĐIỂM MÙ: còn có bụi cây bên đường, kiếng chắn gió bị dơ, cột A khi rẽ trái…                   </strong></p>\r\n<p><strong>à</strong><strong> Điểm mù của xe bạn ở đâu ?</strong></p>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>",
+"title": "Điểm mù, vùng không nhìn thấy",
+"detail": "<p><strong>* ĐIỂM MÙ</strong></p>\r\n<p>Đó chính là những điểm mà bạn không nhìn thấy qua gương chiếu hậu và ở bên trái, bên phải, phía sau ( xe Tải và SUVs ) hoặc những nơi bị khuất tầm nhìn. </p>\r\n<p>Hãy ghi nhớ rằng, phương tiện tham gia giao thông càng lớn thì điểm mù càng lớn, dù họ đã gắn thêm nhiều gương quan sát. </p>\r\n<p>Bạn phải nhận biết những điểm mù và học cách phòng tránh rủi ro bằng cách không cho xe của mình chạy vào những điểm này. </p>\r\n<p>Việc bạn cho xe của mình chạy vào những điểm mù, là chính bạn đã không cho người lái xe khác những cơ hội để tránh né xe của bạn.</p>\r\n<p>ĐIỂM MÙ: còn có bụi cây bên đường, người đi bộ bất ngờ qua đường, kiếng chắn gió bị dơ, cột A của xe bạn khi rẽ trái, rẽ phải…                  </p>\r\n<p><strong> Điểm mù của xe bạn còn ở đâu nữa ? </strong></p>\r\n<p> </p>\r\n<p><strong>* PHÒNG TRÁNH ĐIỂM MÙ</strong></p>\r\n<p>Bạn phải chắc rằng đã ở bên ngoài những điểm mù.</p>\r\n<p>Nếu xe lọt vào ở điểm mù hai bên hông của một xe khác thì áp dụng các cách thức như: chạy chậm lại hoặc nhanh chóng vượt qua điểm mù.</p>\r\n<p>Không chạy vào điểm mù sau xe tải, xe container, vì xe tải, xe container có thể thắng gấp không mong đợi bất cứ lúc nào. </p>\r\n<p>Hãy làm mọi cách để người lái xe khác nhận thấy bạn (bóp kèn…), nếu bạn không nhìn thấy người lái xe trong gương chiếu hậu của họ thì họ cũng sẽ không nhìn thấy bạn.</p>\r\n<p>Ban đêm, bạn không được sử dụng đèn pha (đèn chiếu xa) theo luật định, vì ánh sáng đèn pha sẽ gây ra “điểm mù” cho người lái xe phía trước. </p>\r\n<p> </p>",
 "image": "diem_mu"
+},
+{
+"id": "927",
+"post_id": "95",
+"title": "Nồng độ cồn, chất ma túy",
+"detail": "<p><strong>NỒNG ĐỘ CỒN</strong></p>\r\n<p><strong>Chắc chắn rằng không có một ai lái xe được như bình thường sau khi đã uống rượu bia. Tác hại người lái xe điều biết đó là:</strong></p>\r\n<p>Giảm khả năng phán đoán tình huống hoặc phán đoán sai về khoảng cách, tốc độ.</p>\r\n<p>Buồn ngủ, mệt mỏi, giảm sự tập trung lái xe.</p>\r\n<p>Tạo sự tự tin giả tạo ...</p>\r\n<p>Mỗi Quốc gia, vùng lãnh thổ trên thế giới đều có quy định khác nhau về nồng độ cồn trong máu - BAC (Blood alcohol concentration).</p>\r\n<p>Theo Luật Giao thông đường bộ số 23/2008/QH12 tại K8 Điều 8 quy định các hành vi bị nghiêm cấm trong đó có:</p>\r\n<p><strong>Điều khiển xe ô tô, máy kéo, xe máy chuyên dùng trên đường mà trong máu hoặc hơi thở có nồng độ cồn.</strong></p>\r\n<p><strong>00 miligam/100 mililít máu hoặc </strong></p>\r\n<p><strong>00 miligam/1 lít khí thở.</strong></p>\r\n<p><strong>XỬ PHẠT KHI VI PHẠM</strong></p>\r\n<p><strong>* Tham khảo Nghị định 46/2016/NĐ-CP, Điều 5</strong></p>\r\n<p><strong>Mức 1.</strong> Phạt tiền từ <strong>2.000.000 đồng đến 3.000.000 đồng</strong> đối với người điều khiển xe trên đường vi phạm (K6a):</p>\r\n<p>Nồng độ cồn nhưng chưa vượt quá 50 miligam/100 mililít máu hoặc chưa vượt quá 0,25 miligam/1 lít khí thở.</p>\r\n<p>- Tước quyền sử dụng GPLX 01 - 03 tháng (K12b).</p>\r\n<p><strong>Mức 2.</strong> Phạt tiền từ <strong>7.000.000 đồng đến 8.000.000 đồng</strong> đối với người điều khiển xe trên đường vi phạm (K8b):</p>\r\n<p>Nồng độ cồn vượt quá 50 miligam đến 80 miligam/100 mililít máu hoặc vượt quá 0,25 miligam đến 0,4 miligam/1 lít khí thở.</p>\r\n<p>- Tước quyền sử dụng GPLX 03 - 05 tháng (K12d).</p>\r\n<p><strong>Mức 3</strong>. Phạt tiền từ <strong>16.000.000 đồng đến 18.000.000 đồng</strong> đối với người điều khiển xe trên đường vi phạm (K9a):</p>\r\n<p>Nồng độ cồn vượt quá 80 miligam/100 mililít máu hoặc vượt quá 0,4 miligam/1 lít khí thở.</p>\r\n<p>- Tước quyền sử dụng GPLX 04 - 06 tháng (K12đ).</p>\r\n<p> <strong>* </strong>Phạt tiền từ <strong>16.000.000 đồng đến 18.000.000 đồng</strong> đối với người điều khiển xe trên đường (K9b):</p>\r\n<p><strong>Không chấp hành yêu cầu kiểm tra về nồng độ cồn của người thi hành công vụ.</strong></p>\r\n<p> </p>\r\n<p><strong>CHẤT MA TÚY</strong></p>\r\n<p>* Phạt tiền từ 16.000.000 đồng đến 18.000.000 đồng đối với người điều khiển xe trên đường vi phạm (K9c):</p>\r\n<p><strong>Không chấp hành yêu cầu kiểm tra về chất ma túy của người thi hành công vụ.</strong></p>\r\n<p>* Người điều khiển xe trên đường mà trong cơ thể có chất ma túy (K11):</p>\r\n<p>- Tước quyền sử dụng Giấy phép lái xe từ 22 tháng đến 24 tháng (trong trường hợp có Giấy phép lái xe) hoặc phạt tiền từ 16.000.000 đồng đến 18.000.000 đồng (trong trường hợp không có Giấy phép lái xe hoặc có nhưng đang bị tước quyền sử dụng Giấy phép lái xe).</p>\r\n<p> </p>\r\n<p> </p>",
+"image": "nong_do_con"
+},
+{
+"id": "928",
+"post_id": "95",
+"title": "Tốc độ & giữ khoảng cách an toàn",
+"detail": "<p><em>(Tham khảo cách tính khoảng cách dừng lại của người Pháp theo Le livre Code de la route-2012)</em></p>\r\n<p><strong>* Quy định Tốc độ và khoảng cách an toàn tại Việt Nam (Thông tư 91/2015)</strong></p>\r\n<p> Khi mặt đường khô ráo, khoảng cách an toàn ứng với mỗi tốc độ quy định như sau</p>\r\n<p>  <strong> > 60km/h -----&gt; 35m</strong></p>\r\n<p><strong>      80km/h ----------&gt; 55m</strong></p>\r\n<p><strong>    100km/h ----------------&gt; 70m</strong></p>\r\n<p><strong>    120km/h ----------------------&gt; 100m</strong></p>\r\n<p><strong>* Bạn là lái xe giỏi:</strong></p>\r\n<p>Luôn biết điều chỉnh tốc độ phù hợp với tình trạng mặt đường, mật độ giao thông và tăng khoảng cách xa hơn bình thường với xe chạy phía trước của mình.</p>\r\n<p>Lái xe nhanh hơn chắc chắn khó kiểm soát hơn thì phải tăng khoảng cách xa hơn với xe chạy phía trước của mình.</p>\r\n<p>Lái xe xuống dốc, chở hàng nặng hơn thì phải tăng khoảng cách xa hơn với xe chạy phía trước của mình.</p>\r\n<p>Lái xe trong thời tiết xấu, đường trơn trượt, tầm nhìn bị hạn chế, ban đêm ... điều kiện bất lợi khác... phải biết giảm tốc độ và tăng khoảng cách an toàn.</p>\r\n<p> </p>\r\n<p> </p>",
+"image": "tham_khao_anat"
 }
 ]
 },
 {
-"id": "107",
-"title": "Nồng độ cồn",
-"category_id": "8",
-"type_id": "4",
-"position": "3",
-"type_name": "PDF",
-"content": []
-},
-{
 "id": "29",
-"title": "LÁI XE AN TOÀN",
+"title": "LÁI XE ĐÚNG KỸ THUẬT TRÊN CÁC LOẠI ĐƯỜNG",
 "category_id": "8",
-"type_id": "1",
+"type_id": "6",
 "position": "3",
-"type_name": "Text",
+"type_name": "Multi",
 "content": [
-{
-"id": "159",
-"post_id": "29",
-"title": "Lái xe trên các loại địa hình",
-"detail": "",
-"image": ""
-},
 {
 "id": "160",
 "post_id": "29",
 "title": "Lái xe trên đường phức tạp",
-"detail": "<p><strong>Lái xe trên đường phức tạp đông người, đông xe</strong></p>\r\n<p>Khi đến đường đông người, đông xe, người lái xe phải thận trọng, chú ý quan sát mọi tình huống và có biện pháp xử lý linh hoạt, điều khiển xe phải chính xác, phối hợp mau lẹ giữa chân ga, phanh, ly hợp và tay lái, nghiêm chỉnh chấp hành Luật giao thông đường bộ.</p>\r\n<p><strong>Lái xe trên đường trơn lầy</strong></p>\r\n<p>Đặc điểm khi đi trên đường trơn lầy là lực bám của bánh xe với mặt đường bị giảm nhiều do đường trơn nên khó giữ cho xe đi đúng hướng, bánh xe dễ trượt.</p>\r\n<p>Trước khi cho xe đi qua đường trơn lầy nên dừng xe để kiểm tra mức độ trơn lầy để có phương án cho xe đi qua phù hợp. Nếu có xích chống lầy hoặc xe có bố trí cầu trước chủ động, hộp số phụ hay bộ khoá hãm vi sai nên sử dụng và khi qua phải đưa các cơ cấu trên trở lại vị trí cũ. Nếu đã có vệt của bánh xe trước đi qua thì giữ vững tay lái cho xe đi đúng vệt bánh xe đi trước, sử dụng số thấp đi chậm qua. Khi đi trên đường vòng trơn trượt thì giữ đều ga, không lấy nhiều lái, không đánh tay lái ngoặt, không phanh gấp có thể làm trơn trượt hoặc quay xe. Nếu xe bị trơn trượt ngang nhẹ thì lấy ít lái cho xe từ từ vào giữa đường, nếu trượt nghiêm trọng có thể dỡ hàng, đào rãnh hướng vệt bánh xe về phía an toàn, gài số 1 cho xe tiến vào rãnh đào theo hướng đi lên. Nếu bánh xe bị quay trơn, cho xe lùi lại và lót bằng đá, gạch vỡ, ván lót, cỏ khô, rơm.... không nên rú ga cố cho xe tiến, vì càng làm càng khoét sâu sẽ khó khăn hơn, nhất là khi cầu xe đã chạm đất.</p>\r\n<p> <strong>Lái xe qua đường ngầm</strong></p>\r\n<p>Trên đường ngập nước, xuất hiện đệm nước giữa mặt lốp với mặt đường nên lực bám của bánh xe với mặt đường bị giảm, nhưng lực cản của xe tăng lên, nếu đường cắt ngang dòng nước chảy thì xe còn bị đẩy trôi về phía hạ lưu.</p>\r\n<p>Trước khi cho xe qua đường ngầm cần kiểm tra chiều sâu của mặt nước, tốc độ dòng chảy, tình hình mặt đường như tốt, xấu, rộng, hẹp, đá to, đất, cát.... căn cứ vào đặc tính của xe để có phương án cho xe qua. Trường hợp mức nước quá sâu (nhưng vẫn trong phạm vi cho xe qua được) phải kéo lá chắn gió két nước, tháo dây đai quạt gió, lấy tấm kín bọc bộ chia điện, dây điện, cọc nối và đưa bình điện lên vị trí cao, nút kín lỗ kiểm tra dầu máy, nới lỏng ống thoát khí tại cổ xả hay dùng ống mềm nối cửa cuối ống giảm thanh lên cao.</p>\r\n<p>Khi xe qua ngầm, nếu mặt đường rộng cho xe đi xiên góc theo hướng nước chảy, mặt đường trung bình lái xe đi song song mép đường phía thượng lưu ngay từ đầu.</p>\r\n<p>Cho xe qua đường ngầm nên đi số 1. Nếu có cầu chủ động trước và có hộp số phụ nên sử dụng ngay, giữ vững tay lái, đi đều ga, tránh không để xe chết máy giữa dòng, không nên dừng xe trên đường ngập nước. Nếu giữa chừng bị quay trơn tìm cách kéo đẩy xe về phía đầu ngầm. Không nên cố tăng ga đề phòng đất cát xoáy, lún sâu giữa dòng rất nguy hiểm. Nếu xe đi đoàn nên cho qua từng chiếc một.</p>\r\n<p><strong>Lái xe ban đêm, sương mù, mưa gió lớn</strong></p>\r\n<p>Khi lái xe ban đêm và trời sương mù, mưa gió, phạm vi và cường độ đèn chiếu sáng có hạn nên tầm nhìn bị hạn chế, ánh sáng đèn bị loá nhất là khi có xe đi ngược chiều làm người lái loá mắt. Vì vậy, khi lái xe phải thận trọng, chú ý chọn đường, chọn tốc độ phù hợp với tầm nhìn và thực trạng đường sá để đảm bảo an toàn.</p>\r\n<p>Ban đêm nên cho xe chạy giữa đường (trừ đường phố), xe chạy ban đêm phải sử dụng tất cả các loại đèn chiếu sáng và đèn tín hiệu để soi đường, báo hiệu. Tốc độ dưới 30km/h ánh sáng đèn chiếu cần xa 30m. Tốc độ trên 30km/h ánh sáng chiếu xa 100m trở lên. Trong thành phố thị xã tắt đèn pha bật đèn cốt và đèn con. Khi đỗ xe bật đèn con và đèn hậu.</p>\r\n<p>Trước khi tránh nên chọn chỗ rộng và bằng phẳng, gặp đường hẹp hay có chướng ngại vật nên bình tĩnh, nhường nhịn, cần thiết nên chủ động dừng xe trước.</p>\r\n<p>Khi cần đỗ xe cũng như khi khởi hành, vì tầm nhìn hạn chế nên bật đèn rồi mới cho xe chuyển bánh và đỗ xe xong mới tắt đèn, đỗ xe sát lề đường bên phải và phải có tín hiệu đèn trước và sau xe.</p>\r\n<p>Xe chạy ban đêm nếu bị tắt đèn pha cốt, bất ngờ phải bình tĩnh giảm tốc độ, nhớ hướng đường mà điều khiển xe dừng lại, xuống xe quan sát, dùng người xi nhan hoặc đưa xe vào để đường để sửa chữa.</p>\r\n<p>Khi lùi xe quay đầu xe hoặc xe chạy ở đường vòng hẹp phải có người hướng dẫn hoặc xuống quan sát rồi mới cho xe đi.</p>\r\n<p>Lái xe khi trời mưa gió, sường mù, người lái xe dùng đèn vàng và giảm tốc độ phù hợp tầm nhìn để quan sát và xử lý tình huống an toàn.</p>\r\n<p>Nếu kính lái bị mờ, có thể hạ kính chắn gió để nhìn dễ hơn, chạy chậm. Khi tránh xe phải dùng còi báo hiệu, không lấy lái vào sát lề đường. Nếu thấy không đảm bảo an toàn hoặc nhìn không rõ đường nên dừng xe lại quan sát nhường đường trước.</p>\r\n<p><strong>Lái xe trên đường cao tốc</strong></p>\r\n<p>Đường cao tốc là loại đường có chất lượng tốt, phẳng, rộng và có phân chiều, mỗi chiều phân thành nhiều làn xe quy định cho các cấp tốc độ.</p>\r\n<p>Trên đường cao tốc, yêu cầu xe phải có tình trạng kỹ thuật tốt, người lái phải tuyệt đối chấp hành luật giao thông đường bộ. Việc khống chế tốc độ chủ yếu bằng ga và phanh nhẹ sau những phát hiện từ xa. Vì tốc độ lớn, nếu lấy lái nhiều và phanh gấp làm xe mất ổn định rất nguy hiểm. Nói chung nên căn cứ vào điều kiện kỹ thuật và tốc độ của xe mình đi đúng làn đường quy định, quan sát và căn đường từ xa, điều khiển nhẹ nhàng.</p>\r\n<p>Khi muốn chuyển làn xe (để chạy nhanh hoặc chậm hơn) phải thực hiện tăng, giảm tốc độ trong phạm vi quy định do vạch kẻ đường chỉ định. Trước khi ra làn mới phải bật đèn tín hiệu. Nếu cần dừng hoặc đỗ xe phải giảm dần tốc độ và chuyển về làn xe quy định cho cấp tốc độ thấp nhất.</p>",
+"detail": "<p><strong>Lái xe trên đường phức tạp đông người, đông xe</strong></p>\r\n<p>Khi đến đường đông người, đông xe, người lái xe phải thận trọng, chú ý quan sát mọi tình huống và có biện pháp xử lý linh hoạt, điều khiển xe phải chính xác, phối hợp mau lẹ giữa chân ga, phanh, ly hợp và tay lái, nghiêm chỉnh chấp hành Luật giao thông đường bộ.</p>\r\n<p><strong>Lái xe trên đường trơn lầy</strong></p>\r\n<p>Đặc điểm khi đi trên đường trơn lầy là lực bám của bánh xe với mặt đường bị giảm nhiều do đường trơn nên khó giữ cho xe đi đúng hướng, bánh xe dễ trượt.</p>\r\n<p>Trước khi cho xe đi qua đường trơn lầy nên dừng xe để kiểm tra mức độ trơn lầy để có phương án cho xe đi qua phù hợp. Nếu có xích chống lầy hoặc xe có bố trí cầu trước chủ động, hộp số phụ hay bộ khoá hãm vi sai nên sử dụng và khi qua phải đưa các cơ cấu trên trở lại vị trí cũ. Nếu đã có vệt của bánh xe trước đi qua thì giữ vững tay lái cho xe đi đúng vệt bánh xe đi trước, sử dụng số thấp đi chậm qua. Khi đi trên đường vòng trơn trượt thì giữ đều ga, không lấy nhiều lái, không đánh tay lái ngoặt, không phanh gấp có thể làm trơn trượt hoặc quay xe. Nếu xe bị trơn trượt ngang nhẹ thì lấy ít lái cho xe từ từ vào giữa đường, nếu trượt nghiêm trọng có thể dỡ hàng, đào rãnh hướng vệt bánh xe về phía an toàn, gài số 1 cho xe tiến vào rãnh đào theo hướng đi lên. Nếu bánh xe bị quay trơn, cho xe lùi lại và lót bằng đá, gạch vỡ, ván lót, cỏ khô, rơm.... không nên rú ga cố cho xe tiến, vì càng làm càng khoét sâu sẽ khó khăn hơn, nhất là khi cầu xe đã chạm đất.</p>",
 "image": ""
 },
 {
 "id": "161",
 "post_id": "29",
-"title": "Quay trở đầu xe",
-"detail": "<p><strong>Quay trở đầu xe</strong></p>\r\n<p>Quan sát thật kỹ địa hình nơi quay trở đầu xe.</p>\r\n<p>Lựa chọn phương pháp quay trở đầu xe thích hợp.</p>\r\n<p>Tiến và lùi quay trở đầu xe phải chậm</p>\r\n<p>Thường xuyên ra tín hiệu, tốt nhất nếu có người báo hiệu phía sau.</p>\r\n<p>Nếu quay đầu xe ở nơi nguy hiểm thì đưa đầu xe về phía nguy hiểm đưa đuôi xe về phía an toàn.</p>\r\n<p><strong>* Chú ý :</strong></p>\r\n<p>Khi quay đầu xe phải thực hiện \" tiến già, lùi non \"</p>\r\n<p>Không được cố ép, nếu xét thấy nguy hiểm thì dừng lại và quay trở tiếp.</p>\r\n<p>Các thao tác lái xe phải nhanh nhẹn, chính xác.</p>\r\n<p><strong>Quay đầu xe theo chiều tiến một lần.</strong></p>\r\n<p>Quay đầu xe ở nơi đường rộng, khi xe còn cách chỗ quay đầu khoảng 50m thì ra tín hiệu xin quay đầu bằng đèn xi nhan hoặc bằng tay, giảm tốc độ cho xe chạy sát lề đường bên phải, nếu không có trở ngại thì giảm tới số chậm, bóp còi và lấy lái cho xe từ từ quay đầu theo hướng ngược lại.</p>\r\n<p>Phương pháp quay đầu xe một lần còn có thể áp dụng ở ngã ba, ngã tư, ngã năm... nơi mặt đường giao nhau rộng rãi, không có biển cấm quay đầu xe và ở thời điểm mật độ giao thông không có trở ngại.</p>\r\n<p><strong>Quay đầu ngang đường kết hợp giữa tiến và lùi xe.</strong></p>\r\n<p>Nếu mặt đường không đủ rộng thì phải quay theo kiểu tiến, lùi lại nhiều lần bằng cách cho xe quay ngang đường, khi tiến gần hết mặt đường thì trả lại tay lái và dừng xe. Tiếp tục cho xe lùi lại, khi lùi gần hết mặt đường phía sau cũng trả lái và dừng xe lại. Tương tự như vậy tiến, lùi cho đến khi quay được đầu xe theo hướng ngược lại.</p>\r\n<p> </p>",
+"title": "Quay trở đầu xe chữ U, 3 điểm",
+"detail": "<p><strong>Quay trở đầu xe</strong></p>\r\n<p>Quan sát thật kỹ địa hình nơi quay trở đầu xe.</p>\r\n<p>Lựa chọn phương pháp quay trở đầu xe thích hợp.</p>\r\n<p>Tiến và lùi quay trở đầu xe phải chậm</p>\r\n<p>Thường xuyên ra tín hiệu, tốt nhất nếu có người báo hiệu phía sau.</p>\r\n<p>Nếu quay đầu xe ở nơi nguy hiểm thì đưa đầu xe về phía nguy hiểm đưa đuôi xe về phía an toàn.</p>\r\n<p><strong>* Chú ý :</strong></p>\r\n<p>Khi quay đầu xe phải thực hiện \" tiến già, lùi non \"</p>\r\n<p>Không được cố ép, nếu xét thấy nguy hiểm thì dừng lại và quay trở tiếp.</p>\r\n<p>Các thao tác lái xe phải nhanh nhẹn, chính xác.</p>\r\n<p><strong>Quay đầu xe chữ U (chiều tiến một lần).</strong></p>\r\n<p>Phương pháp quay U còn có thể áp dụng ở ngã ba, ngã tư, ngã năm... nơi mặt đường giao nhau rộng rãi, không có biển cấm quay đầu xe, không quay xe trên vạch kẻ dành cho người đi bộ và ở thời điểm mật độ giao thông không có trở ngại.</p>\r\n<p>Quay đầu xe ở nơi đường rộng, khi xe còn cách chỗ quay đầu khoảng 50m thì ra tín hiệu xin quay đầu bằng đèn xinhan hoặc bằng tay, giảm tốc độ cho xe chạy sát lề đường bên phải, nếu không có trở ngại thì giảm tới số chậm, bóp còi và lấy lái cho xe từ từ quay đầu theo hướng ngược lại.</p>\r\n<p><strong>Quay đầu xe ngang đường 3 điểm (kết hợp giữa tiến và lùi xe).</strong></p>\r\n<p>Trường hợp mặt đường không đủ rộng thì phải quay theo kiểu tiến, lùi lại nhiều lần bằng cách cho xe quay ngang đường. Chạy xe vào sát lề đường bên phải trước khi quay đầu, bật tín hiệu xinhan trái hoặc bằng tay cài số 1, đánh hết lái qua trái khi tiến gần hết mặt đường thì trả hết lái về phải dừng xe; Ra số 0 cài số lùi lại, khi lùi gần hết mặt đường phía sau trả hết lái về trái và dừng xe lại; Ra số 0 cài số 1 tiến xe theo hướng ngược lại.</p>\r\n<p> </p>",
 "image": ""
 },
 {
@@ -6463,6 +6444,27 @@
 "post_id": "29",
 "title": "Lái xe trên đường trung du, đèo núi",
 "detail": "<p>Đường trung du đèo núi so với đường bằng thì mặt đường thường nhỏ hẹp, dốc cao, đường chênh vênh mấp mô, suối sâu, đường quanh co vòng vèo. Người lái xe trên đường trung du đèo núi phải xử trí nhiều. Do điều kiện tầm nhìn hạn chế, đòi hỏi người lái xe phải xử trí tay lái, chân ga, tay số, phanh cho thật chính xác, linh hoạt và kịp thời mới đảm bảo an toàn.</p>\r\n<p><strong>Lái xe lên dốc</strong></p>\r\n<p> Khi lái xe lên dốc, phải chú ý phối hợp tốt phanh tay, ly hợp, chân ga. Nếu nhả hết ly hợp mà phanh chậm nhả sẽ bị chết máy, nếu nhả phanh tay sớm quá mà ly hợp nhả chậm chưa tới tầm tiếp giáp xe sẽ bị trôi phải hãm xe và cho chuyển bánh lại, xe đang lên dốc bị chết máy phải dùng phanh chân, phanh tay để hãm và không được đạp ly hợp trước.</p>\r\n<p>Khi đường lên dốc ngắn, độ dốc thấp, mặt đường rộng và bằng phẳng có thể lợi dụng đà quán tính và tăng ga để vượt dốc, khi thấy động lực yếu, đà xe giảm phải giảm số, cần thiết có thể về tắt số để xe không bị mất đà, không chết máy.</p>\r\n<p>Tăng số lên dốc phải lấy đà nhiều, giảm số sớm, phối hợp nhả ly hợp với tiếp ga kịp thời, nhanh mới giữ được đà xe.</p>\r\n<p>Khi gần tới đỉnh dốc nên giảm ga (lợi dụng quán tính cho vượt qua đỉnh dốc và hạn chế bớt tốc độ trước khi xe xuống dốc) điều khiển xe đi về phần đường bên phải và báo hiệu bằng đèn, còi, chú ý có người và xe bên kia dốc đang đi lên.</p>\r\n<p>Trên đoạn đường liên tiếp xuống và lên dốc, tuỳ theo địa hình mà khống chế tốc độ và lợi dụng đà xe khi xuống đến lưng chừng dốc, nhả phanh và có thể thêm ga cho xe lên dốc tiếp theo.</p>\r\n<p>Hạn chế đỗ xe trên đưòng dốc, khi cần đỗ phải phát tín hiệu, giảm về số thấp, lái xe sát về lề đường bên phải, nhả ga, đệm phanh cho xe chậm lại, khi xe gần đứng mới đạp ly hợp, đạp phanh chân, kéo chặt phanh tay, tắt máy, gài số 1 và chèn xe chắc chắn.</p>\r\n<p><strong>Lái xe xuống dốc</strong></p>\r\n<p>Trước khi xuống dốc nên đạp thử phanh và quá trình xuống dốc dùng phanh để khống chế tốc độ, kết hợp với sức cản của động cơ và lực ma sát của mặt đường. Nếu độ dốc thấp, có thể dùng số cao ga nhẹ; nếu độ dốc cao, hàng nặng dùng số thấp hoặc trung bình để phanh bằng động cơ và kết hợp phanh chân để khống chế tốc độ. <strong>Thông thường xuống dốc đi số cao hơn một cấp so với khi lên.</strong></p>\r\n<p><strong>Lái xe trên đường vòng</strong></p>\r\n<p>Khi chạy trên đường vòng, các bánh xe trục trước và trục sau ở cùng một phía không trùng vệt mà có một độ lệch nhất định. Độ lệch này phụ thuộc vào góc lái và khoảng cách giữa hai trục xe.</p>\r\n<p>Khi xe chạy trên đường vòng, lực cản tăng lên, đồng thời độ ổn định của xe giảm đi do tác dụng của lực ly tâm. Lực ly tâm phụ thuộc vào bán kính quay vòng và tốc độ. Do vậy trước khi tới đường vòng phải giảm tốc độ, về số thấp, quan sát các trở ngại, quan sát tín hiệu của xe đi ngược chiều và dùng còi, đèn báo hiệu sự xuất hiện của xe mình. Bán kính vòng càng nhỏ lực ly tâm càng lớn, vì vậy tốc độ càng phải chậm. Tùy thuộc vào đoạn đường mà lấy lái từ từ, vừa đủ, giữ ga cho xe chạy ổn định, tới giữa cung vòng có thể tăng ga để khắc phục lực cản.</p>\r\n<p> </p>",
+"image": ""
+},
+{
+"id": "931",
+"post_id": "29",
+"title": "Lái xe trên đường cao tốc",
+"detail": "<p>Đường cao tốc là loại đường có chất lượng tốt, phẳng, rộng và có phân chiều, mỗi chiều phân thành nhiều làn xe quy định cho một hoặc hai cấp tốc độ.</p>\r\n<p>Trên đường cao tốc, yêu cầu xe phải có tình trạng kỹ thuật tốt, người lái xe phải tuyệt đối chấp hành luật giao thông đường bộ. Việc khống chế tốc độ chủ yếu bằng ga và phanh nhẹ sau những phát hiện từ xa. Vì tốc độ lớn, nếu lấy lái nhiều và phanh gấp làm xe mất ổn định rất nguy hiểm. Nói chung nên căn cứ vào điều kiện kỹ thuật và tốc độ của xe mình đi đúng làn đường quy định, quan sát và căn đường từ xa, điều khiển nhẹ nhàng.</p>\r\n<p>Khi muốn chuyển làn xe (để chạy nhanh hoặc chậm hơn) phải thực hiện tăng, giảm tốc độ trong phạm vi quy định do vạch kẻ đường chỉ định. Trước khi ra làn mới phải bật đèn tín hiệu, quan sát thật kỹ. Nếu cần dừng hoặc đỗ xe phải giảm dần tốc độ và chuyển về làn xe quy định cho cấp tốc độ thấp nhất.</p>",
+"image": ""
+},
+{
+"id": "932",
+"post_id": "29",
+"title": "Lái xe ban đêm và trời sương mù, mưa gió",
+"detail": "<p>Khi lái xe ban đêm và trời sương mù, mưa gió, phạm vi và cường độ đèn chiếu sáng có hạn nên tầm nhìn bị hạn chế, ánh sáng đèn bị loá nhất là khi có xe đi ngược chiều làm người lái loá mắt. Vì vậy, khi lái xe phải thận trọng, chú ý chọn đường, chọn tốc độ phù hợp với tầm nhìn và thực trạng đường sá để đảm bảo an toàn.</p>\r\n<p>Ban đêm nên cho xe chạy giữa đường (trừ đường phố), xe chạy ban đêm phải sử dụng tất cả các loại đèn chiếu sáng và đèn tín hiệu để soi đường, báo hiệu. Tốc độ dưới 30km/h ánh sáng đèn chiếu cần xa 30m. Tốc độ trên 30km/h ánh sáng chiếu xa 100m trở lên. Trong thành phố thị xã tắt đèn pha bật đèn cốt và đèn con. Khi đỗ xe bật đèn con và đèn hậu.</p>\r\n<p>Trước khi tránh nên chọn chỗ rộng và bằng phẳng, gặp đường hẹp hay có chướng ngại vật nên bình tĩnh, nhường nhịn, cần thiết nên chủ động dừng xe trước.</p>\r\n<p>Khi cần đỗ xe cũng như khi khởi hành, vì tầm nhìn hạn chế nên bật đèn rồi mới cho xe chuyển bánh và đỗ xe xong mới tắt đèn, đỗ xe sát lề đường bên phải và phải có tín hiệu đèn trước và sau xe.</p>\r\n<p>Xe chạy ban đêm nếu bị tắt đèn pha cốt, bất ngờ phải bình tĩnh giảm tốc độ, nhớ hướng đường mà điều khiển xe dừng lại, xuống xe quan sát, dùng người xi nhan hoặc đưa xe vào để đường để sửa chữa.</p>\r\n<p>Khi lùi xe quay đầu xe hoặc xe chạy ở đường vòng hẹp phải có người hướng dẫn hoặc xuống quan sát rồi mới cho xe đi.</p>\r\n<p>Lái xe khi trời mưa gió, sường mù, người lái xe dùng đèn vàng và giảm tốc độ phù hợp tầm nhìn để quan sát và xử lý tình huống an toàn.</p>\r\n<p>Nếu kính lái bị mờ, có thể hạ kính chắn gió để nhìn dễ hơn, chạy chậm. Khi tránh xe phải dùng còi báo hiệu, không lấy lái vào sát lề đường. Nếu thấy không đảm bảo an toàn hoặc nhìn không rõ đường nên dừng xe lại quan sát nhường đường trước.</p>",
+"image": ""
+},
+{
+"id": "933",
+"post_id": "29",
+"title": "Lái xe qua đường ngầm, ngập nước",
+"detail": "<p>Trên đường ngập nước, xuất hiện đệm nước giữa mặt lốp với mặt đường nên lực bám của bánh xe với mặt đường bị giảm, nhưng lực cản của xe tăng lên, nếu đường cắt ngang dòng nước chảy thì xe còn bị đẩy trôi về phía hạ lưu.</p>\r\n<p>Trước khi cho xe qua đường ngầm cần kiểm tra chiều sâu của mặt nước, tốc độ dòng chảy, tình hình mặt đường như tốt, xấu, rộng, hẹp, đá to, đất, cát.... căn cứ vào đặc tính của xe để có phương án cho xe qua. Trường hợp mức nước quá sâu (nhưng vẫn trong phạm vi cho xe qua được) phải kéo lá chắn gió két nước, tháo dây đai quạt gió, lấy tấm kín bọc bộ chia điện, dây điện, cọc nối và đưa bình điện lên vị trí cao, nút kín lỗ kiểm tra dầu máy, nới lỏng ống thoát khí tại cổ xả hay dùng ống mềm nối cửa cuối ống giảm thanh lên cao.</p>\r\n<p>Khi xe qua ngầm, nếu mặt đường rộng cho xe đi xiên góc theo hướng nước chảy, mặt đường trung bình lái xe đi song song mép đường phía thượng lưu ngay từ đầu.</p>\r\n<p>Cho xe qua đường ngầm nên đi số 1. Nếu có cầu chủ động trước và có hộp số phụ nên sử dụng ngay, giữ vững tay lái, đi đều ga, tránh không để xe chết máy giữa dòng, không nên dừng xe trên đường ngập nước. Nếu giữa chừng bị quay trơn tìm cách kéo đẩy xe về phía đầu ngầm. Không nên cố tăng ga đề phòng đất cát xoáy, lún sâu giữa dòng rất nguy hiểm. Nếu xe đi đoàn nên cho qua từng chiếc một. </p>\r\n<p>Luôn luôn ghi nhớ rà thắng (má phanh) cho khô tức khi thắng có hiệu lực, thì mới được phép tăng số, tăng tốc độ di chuyển tiếp.</p>",
 "image": ""
 }
 ]
@@ -6599,7 +6601,7 @@
 "post_id": "58",
 "title": "PHÙ HIỆU GIÁO VIÊN DẠY LÁI XE",
 "detail": "",
-"image": "phu_hieu_day_lai_xe"
+"image": "phuhieugiaovien"
 }
 ]
 },
@@ -6748,11 +6750,28 @@
 ]
 },
 {
+"id": "108",
+"title": "CƠ SỞ ĐÀO TẠO LÁI XE",
+"category_id": "13",
+"type_id": "1",
+"position": "2",
+"type_name": "Text",
+"content": [
+{
+"id": "929",
+"post_id": "108",
+"title": "DANH SÁCH ",
+"detail": "<div> </div>\r\n<div><strong>* TP. HỒ CHÍ MINH</strong></div>\r\n<div><strong>1. TTDN THÁI SƠN - BQP.</strong></div>\r\n<div><strong>Add1: số 3 Đường 3/2 Phường 11, Quận 10, Tp. HCM</strong></div>\r\n<div><strong>Tel: 082.26.26.999</strong></div>\r\n<div><strong>Hotline: 0968.12.06.06 Ms. Khang</strong></div>\r\n<div><strong>Add2: số 364/1A Phan Văn Trị Phường 5 Quận Gò Vấp, Tp. HCM</strong></div>\r\n<div><strong>Tel: 0835.888.499</strong></div>\r\n<div><strong>Hotline: 0968.13.06.06 Ms. Thư</strong> </div>\r\n<div> </div>\r\n<div><strong>2.</strong></div>\r\n<div> </div>",
+"image": ""
+}
+]
+},
+{
 "id": "72",
 "title": "THẺ HỌC VIÊN VÀ PHÙ HIỆU GIÁO VIÊN",
 "category_id": "13",
 "type_id": "4",
-"position": "2",
+"position": "3",
 "type_name": "PDF",
 "content": [
 {
@@ -6761,23 +6780,6 @@
 "title": "THẺ HỌC VIÊN VÀ PHÙ HIỆU GIÁO VIÊN",
 "detail": "",
 "image": "the_hoc_vien"
-}
-]
-},
-{
-"id": "73",
-"title": "ĐỊA ĐIỂM HỌC, THI GPLX",
-"category_id": "13",
-"type_id": "4",
-"position": "3",
-"type_name": "PDF",
-"content": [
-{
-"id": "895",
-"post_id": "73",
-"title": "ĐỊA ĐIỂM HỌC, THI GPLX",
-"detail": "<p>TP. HỒ CHÍ MINH</p>\r\n<p>1.</p>\r\n<p>2.</p>\r\n<p>3.</p>\r\n<p>HÀ NỘI</p>\r\n<p>1.</p>\r\n<p>2.</p>\r\n<p>3.</p>\r\n<p>HẢI PHÒNG</p>",
-"image": "dia_diem_hoc_thi"
 }
 ]
 },
@@ -6905,7 +6907,7 @@
 },
 {
 "id": "66",
-"title": "KHÔNG ĐỔI GIẤY PHÉP LÁI XE MỘT SỐ TRƯỜNG HỢP SAU",
+"title": "MỘT SỐ TRƯỜNG HỢP KHÔNG ĐỔI GIẤY PHÉP LÁI XE ",
 "category_id": "12",
 "type_id": "1",
 "position": "2",
@@ -7205,19 +7207,19 @@
 ]
 },
 {
-"id": "88",
-"title": " ĐƠN ĐỀ NGHỊ HỌC, SÁT HẠCH ĐỂ CẤP GIẤY PHÉP LÁI XE",
+"id": "98",
+"title": "CƠ SỞ ĐÀO TẠO LÁI XE",
 "category_id": "14",
-"type_id": "4",
+"type_id": "1",
 "position": "2",
-"type_name": "PDF",
+"type_name": "Text",
 "content": [
 {
-"id": "906",
-"post_id": "88",
-"title": "ĐƠN ĐỀ NGHỊ HỌC, SÁT HẠCH ĐỂ CẤP GIẤY PHÉP LÁI XE",
-"detail": "",
-"image": "don_de_nghi_hoc"
+"id": "920",
+"post_id": "98",
+"title": "DANH SÁCH",
+"detail": "<p> </p>\r\n<div><strong>* TP. HỒ CHÍ MINH</strong></div>\r\n<div><strong>1. TTDN THÁI SƠN - BQP.</strong></div>\r\n<div><strong>Add1: số 3 Đường 3/2 Phường 11, Quận 10, Tp. HCM</strong></div>\r\n<div><strong>Tel: 082.26.26.999</strong></div>\r\n<div><strong>Hotline: 0968.12.06.06 Ms. Khang</strong></div>\r\n<div><strong>Add2: số 364/1A Phan Văn Trị Phường 5 Quận Gò Vấp, Tp. HCM</strong></div>\r\n<div><strong>Tel: 0835.888.499</strong></div>\r\n<div><strong>Hotline: 0968.13.06.06 Ms. Thư</strong> </div>\r\n<div><strong>2.</strong></div>\r\n<div> </div>\r\n<div><strong>* HÀ NỘI</strong></div>\r\n<div> </div>\r\n<div>1.</div>\r\n<p>2.</p>\r\n<p>3.</p>\r\n<p><strong>* HẢI PHÒNG</strong></p>\r\n<p><strong>1.</strong></p>\r\n<p><strong>2.</strong></p>\r\n<p><strong>3.</strong></p>\r\n<p><strong>* VŨNG TÀU</strong></p>",
+"image": ""
 }
 ]
 },
@@ -7324,19 +7326,19 @@
 ]
 },
 {
-"id": "98",
-"title": "ĐỊA ĐIỂM HỌC, THI LẤY GPLX",
+"id": "88",
+"title": " ĐƠN ĐỀ NGHỊ HỌC, SÁT HẠCH ĐỂ CẤP GIẤY PHÉP LÁI XE",
 "category_id": "14",
-"type_id": "1",
+"type_id": "4",
 "position": "9",
-"type_name": "Text",
+"type_name": "PDF",
 "content": [
 {
-"id": "920",
-"post_id": "98",
-"title": "DANH SÁCH",
-"detail": "<p>TP. HỒ CHÍ MINH</p>\r\n<p>1.</p>\r\n<p>2.</p>\r\n<p>3.</p>\r\n<p>HÀ NỘI</p>\r\n<p>1.</p>\r\n<p>2.</p>\r\n<p>3.</p>\r\n<p>HẢI PHÒNG</p>",
-"image": ""
+"id": "906",
+"post_id": "88",
+"title": "ĐƠN ĐỀ NGHỊ HỌC, SÁT HẠCH ĐỂ CẤP GIẤY PHÉP LÁI XE",
+"detail": "",
+"image": "don_de_nghi_hoc"
 }
 ]
 }

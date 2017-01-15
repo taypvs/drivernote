@@ -7,6 +7,8 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.google.gson.Gson;
 
 import org.json.JSONException;
@@ -15,6 +17,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.List;
 
+import app.camnanglaixe.com.android.Common.CommonUtils;
 import app.camnanglaixe.com.android.Common.PreferenceUtils;
 import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.adapter.ListSubTopicGridAdapter;
@@ -70,6 +73,18 @@ public class ListSubTopicGridActivity extends BaseActivity {
                     startSubActivity(currentTopic.type_name, false, key_topic);
             }
         });
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        if (CommonUtils.isOnline(getBaseContext())) {
+            mAdView.setVisibility(View.VISIBLE);
+            AdRequest adRequest = new AdRequest.Builder()
+                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
+                    .build();
+            mAdView.loadAd(adRequest);
+        }
+        else{
+            mAdView.setVisibility(View.GONE);
+        }
     }
 
 }

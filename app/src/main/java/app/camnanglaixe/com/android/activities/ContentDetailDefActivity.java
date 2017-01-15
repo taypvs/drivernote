@@ -5,9 +5,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ListView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import app.camnanglaixe.com.android.Common.CommonUtils;
 import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.adapter.ListContentDefAdapter;
 import app.camnanglaixe.com.android.jsonhandler.JsonParseMachine;
@@ -54,6 +58,18 @@ public class ContentDetailDefActivity extends BaseActivity {
                 listContentView.setSelectionAfterHeaderView();
             }
         });
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        if (CommonUtils.isOnline(getBaseContext())) {
+            mAdView.setVisibility(View.VISIBLE);
+            AdRequest adRequest = new AdRequest.Builder()
+                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
+                    .build();
+            mAdView.loadAd(adRequest);
+        }
+        else{
+            mAdView.setVisibility(View.GONE);
+        }
     }
 
 }

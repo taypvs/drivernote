@@ -8,6 +8,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -58,6 +61,18 @@ public class ContentDetailUrlActivity extends BaseActivity {
                 CommonUtils.openWebPage(getBaseContext(), Html.fromHtml(currentSubTopic.content.get(i).detail.trim()).toString());
             }
         });
+
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        if (CommonUtils.isOnline(getBaseContext())) {
+            mAdView.setVisibility(View.VISIBLE);
+            AdRequest adRequest = new AdRequest.Builder()
+                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
+                    .build();
+            mAdView.loadAd(adRequest);
+        }
+        else{
+            mAdView.setVisibility(View.GONE);
+        }
     }
 
     public void onDestroy() {
