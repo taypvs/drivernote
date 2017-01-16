@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
 import android.view.View;
-import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -25,7 +24,6 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
@@ -34,7 +32,6 @@ import app.camnanglaixe.com.android.Common.Constanst;
 import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.jsonhandler.JsonParseMachine;
 import app.camnanglaixe.com.android.models.ContentDetailRule;
-import app.camnanglaixe.com.android.models.SubTopicObject;
 
 /**
  * Created by taypham on 16/12/2016.
@@ -86,7 +83,7 @@ public class ContentDetailMultiTaskActivity extends BaseActivity {
         if (CommonUtils.isOnline(getBaseContext())) {
             mAdView.setVisibility(View.VISIBLE);
             AdRequest adRequest = new AdRequest.Builder()
-                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
+//                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
                     .build();
             mAdView.loadAd(adRequest);
         }

@@ -17,7 +17,6 @@ import org.json.JSONObject;
 import app.camnanglaixe.com.android.Common.CommonUtils;
 import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.adapter.ListContentAdapter;
-import app.camnanglaixe.com.android.adapter.ListContentTextAdapter;
 import app.camnanglaixe.com.android.jsonhandler.JsonParseMachine;
 import app.camnanglaixe.com.android.models.SubTopicObject;
 
@@ -69,7 +68,7 @@ public class ContentDetailListActivity extends BaseActivity {
         if (CommonUtils.isOnline(getBaseContext())) {
             mAdView.setVisibility(View.VISIBLE);
             AdRequest adRequest = new AdRequest.Builder()
-                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
+//                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
                     .build();
             mAdView.loadAd(adRequest);
         }

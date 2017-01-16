@@ -68,7 +68,7 @@ public class ListSignActivity extends BaseActivity {
         if (CommonUtils.isOnline(getBaseContext())) {
             mAdView.setVisibility(View.VISIBLE);
             AdRequest adRequest = new AdRequest.Builder()
-                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
+//                    .addTestDevice(CommonUtils.getDeviceId(getBaseContext()))
                     .build();
             mAdView.loadAd(adRequest);
         }
