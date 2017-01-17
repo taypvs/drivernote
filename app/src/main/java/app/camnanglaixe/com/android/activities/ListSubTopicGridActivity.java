@@ -55,6 +55,7 @@ public class ListSubTopicGridActivity extends BaseActivity {
 
         List<String> listTopicStr = new ArrayList<String>();
         listTopicStr.add(getResources().getString(R.string.nghi_dinh_bon_sau));
+        listTopicStr.add(getResources().getString(R.string.mot_so_dieu_phat));
         listTopicStr.add(getResources().getString(R.string.tham_quyen_xu_phat));
 
         ((TextView)findViewById(R.id.title)).setText(currentTopic.name);
@@ -68,6 +69,11 @@ public class ListSubTopicGridActivity extends BaseActivity {
                     Gson gson = new Gson();
                     String json = gson.toJson(currentTopic.small_topicND.get(0));
                     startContentActivity(currentTopic.small_topicND.get(0).type_name, json);
+                }
+                else if (i==2){
+                    Gson gson = new Gson();
+                    String json = gson.toJson(currentTopic.small_thamQuyen.get(0));
+                    startContentActivity(currentTopic.small_thamQuyen.get(0).type_name, json);
                 }
                 else
                     startSubActivity(currentTopic.type_name, false, key_topic);

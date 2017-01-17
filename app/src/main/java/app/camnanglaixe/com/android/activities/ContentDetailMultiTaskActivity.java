@@ -3,6 +3,7 @@ package app.camnanglaixe.com.android.activities;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.text.Html;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -215,12 +216,15 @@ public class ContentDetailMultiTaskActivity extends BaseActivity {
                 pdfView.addView(mDocview);
             }
         }
+
     }
 
     private void initContentText(){
         contentView.setVisibility(View.VISIBLE);
         pdfView.setVisibility(View.GONE);
         detailText = (TextView) findViewById(R.id.content_text);
+        detailText.setMovementMethod(new ScrollingMovementMethod());
+
         titleTv = (TextView) findViewById(R.id.content_title);
         imageView = (ImageView) findViewById(R.id.content_image);
         detailText.setText(Html.fromHtml(currentContent.detail));
@@ -233,5 +237,13 @@ public class ContentDetailMultiTaskActivity extends BaseActivity {
                 imageView.setImageDrawable(CommonUtils.getDrawableResourceByName(getBaseContext(), currentContent.image.trim().toLowerCase()));
             }
         }
+
+        findViewById(R.id.up_btn).setVisibility(View.VISIBLE);
+        findViewById(R.id.up_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                findViewById(R.id.multi_content_sv).scrollTo(0, 0);
+            }
+        });
     }
 }

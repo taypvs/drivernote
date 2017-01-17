@@ -21,6 +21,7 @@ public class Topic {
     public String version;
     public List<SubTopicObject> small_topic;
     public List<SubTopicObject> small_topicND;
+    public List<SubTopicObject> small_thamQuyen;
 
     public Topic(String id, String type_name, String name, String icon, String version, JSONArray subTitleArray){
         this.id = id;
@@ -30,6 +31,7 @@ public class Topic {
         this.version = version;
         small_topic = new ArrayList<SubTopicObject>();
         small_topicND = new ArrayList<SubTopicObject>();
+        small_thamQuyen = new ArrayList<SubTopicObject>();
         try {
             for (int i = 0; i < subTitleArray.length(); i++) {
                 String subTopicId = subTitleArray.getJSONObject(i).optString("id");
@@ -42,6 +44,10 @@ public class Topic {
                     Log.d("TayPVS", "TayPVS - Type : " + subType.toLowerCase());
                     if(subType.toLowerCase().equals(Constanst.TYPE_POST_4))
                         small_topicND.add(newSubTopic);
+                    else if (subTopicTitle.toLowerCase().equals("thẩm quyền xử phạt")) {
+                        Log.d("TayPVS", "TayPVS - Type tham quyen : " + subType.toLowerCase());
+                        small_thamQuyen.add(newSubTopic);
+                    }
                     else
                         small_topic.add(newSubTopic);
                 }
@@ -64,6 +70,22 @@ public class Topic {
                 JSONArray contentArray = subTitleArray.getJSONObject(i).optJSONArray("content");
                 SubTopicObject newSubTopic = new SubTopicObject(subTopicId, subTopicTitle, subType, category_id,contentArray);
                 small_topicND.add(newSubTopic);
+            }
+        }catch (JSONException e){
+
+        }
+    }
+
+    public void addSubtopicTQ(JSONArray subTitleArray){
+        try {
+            for (int i = 0; i < subTitleArray.length(); i++) {
+                String subTopicId = subTitleArray.getJSONObject(i).optString("id");
+                String subTopicTitle = subTitleArray.getJSONObject(i).optString("title");
+                String subType = subTitleArray.getJSONObject(i).optString("type_name");
+                String category_id = subTitleArray.getJSONObject(i).optString("category_id", "");
+                JSONArray contentArray = subTitleArray.getJSONObject(i).optJSONArray("content");
+                SubTopicObject newSubTopic = new SubTopicObject(subTopicId, subTopicTitle, subType, category_id,contentArray);
+                small_thamQuyen.add(newSubTopic);
             }
         }catch (JSONException e){
 

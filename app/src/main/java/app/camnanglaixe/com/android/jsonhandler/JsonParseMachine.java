@@ -40,6 +40,8 @@ public class JsonParseMachine {
         try {
             if (jsonObject.getJSONArray("small_topicND") != null)
                 newTopic.addSubtopicND(jsonObject.optJSONArray("small_topicND"));
+            if (jsonObject.getJSONArray("small_thamQuyen") != null)
+                newTopic.addSubtopicTQ(jsonObject.optJSONArray("small_thamQuyen"));
         }catch (JSONException e){
             e.printStackTrace();
         }
