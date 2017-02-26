@@ -13,6 +13,7 @@ import org.json.JSONException;
 import app.camnanglaixe.com.android.Common.CommonUtils;
 import app.camnanglaixe.com.android.Common.Constanst;
 import app.camnanglaixe.com.android.Common.PreferenceUtils;
+import app.camnanglaixe.com.android.Common.VersionChecker;
 import app.camnanglaixe.com.android.R;
 import app.camnanglaixe.com.android.apiservices.LoadFullJsonWebservice;
 import app.camnanglaixe.com.android.models.FullTopics;
@@ -41,6 +42,15 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
 
             CommonUtils.clearFolderApp();
             if (CommonUtils.isOnline(getBaseContext())) {
+                VersionChecker versionChecker = new VersionChecker();
+                try {
+                    String latestVersion = versionChecker.execute().get();
+
+
+                    Log.d("TayPVS", "TayPVS - isHaveNewVersion : " + CommonUtils.isHaveNewVersion(latestVersion, CommonUtils.getAppVersion(getBaseContext())));
+                }catch(Exception e){
+
+                }
                 loadAllws = new LoadFullJsonWebservice(this, this);
                 loadAllws.doLoadAPI();
             } else {

@@ -2,6 +2,7 @@ package app.camnanglaixe.com.android.Common;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
@@ -161,5 +162,34 @@ public class CommonUtils {
                 new File(dir, children[i]).delete();
             }
         }
+    }
+
+    public static String getAppVersion(Context context){
+        try {
+            PackageInfo pInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), 0);
+            String version = pInfo.versionName;
+            return version;
+        } catch (Exception e){
+            return  "";
+        }
+    }
+
+    public static boolean isHaveNewVersion(String googleVersion, String currentVersion){
+        try{
+            String[] gVerionSpl = googleVersion.split(".");
+            String[] cVersionSpl = currentVersion.split(".");
+
+            for(int i = 0; i < 3; i++){
+                int gVersionInt = Integer.parseInt(gVerionSpl[i]);
+                int cVersionInt = Integer.parseInt(cVersionSpl[i]);
+
+                if(gVersionInt > cVersionInt)
+                    return true;
+            }
+
+        } catch (Exception e){
+
+        }
+        return false;
     }
 }
