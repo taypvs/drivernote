@@ -1,24 +1,39 @@
 package app.camnanglaixe.com.android.Common;
 
+import android.annotation.SuppressLint;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.pm.PackageInfo;
+import android.content.pm.ResolveInfo;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Bundle;
+import android.os.CancellationSignal;
 import android.os.Environment;
+import android.os.ParcelFileDescriptor;
+import android.print.PageRange;
+import android.print.PrintAttributes;
+import android.print.PrintDocumentAdapter;
+import android.print.PrintDocumentInfo;
+import android.print.PrintManager;
 import android.provider.Settings;
 import android.util.Log;
 
 import com.google.gson.Gson;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.util.List;
 
 /**
  * Created by taypham on 30/11/2016.
@@ -176,8 +191,8 @@ public class CommonUtils {
 
     public static boolean isHaveNewVersion(String googleVersion, String currentVersion){
         try{
-            String[] gVerionSpl = googleVersion.split(".");
-            String[] cVersionSpl = currentVersion.split(".");
+            String[] gVerionSpl = googleVersion.split("\\.");
+            String[] cVersionSpl = currentVersion.split("\\.");
 
             for(int i = 0; i < 3; i++){
                 int gVersionInt = Integer.parseInt(gVerionSpl[i]);
@@ -191,5 +206,97 @@ public class CommonUtils {
 
         }
         return false;
+    }
+
+    public static void openAppRating(Context context) {
+        Intent rateIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("market://details?id=" + context.getPackageName()));
+        boolean marketFound = false;
+
+        // find all applications able to handle our rateIntent
+        final List<ResolveInfo> otherApps = context.getPackageManager().queryIntentActivities(rateIntent, 0);
+        for (ResolveInfo otherApp : otherApps) {
+            // look for Google Play application
+            if (otherApp.activityInfo.applicationInfo.packageName.equals("com.android.vending")) {
+
+                ActivityInfo otherAppActivity = otherApp.activityInfo;
+                ComponentName componentName = new ComponentName(otherAppActivity.applicationInfo.packageName,
+                        otherAppActivity.name);
+                rateIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+                rateIntent.setComponent(componentName);
+                context.startActivity(rateIntent);
+                marketFound = true;
+                break;
+            }
+        }
+
+        // if GP not present on device, open web browser
+        if (!marketFound) {
+            Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                    Uri.parse("https://play.google.com/store/apps/details?id=" + context.getPackageName()));
+            context.startActivity(webIntent);
+        }
+    }
+
+    @SuppressWarnings("deprecation")
+    @SuppressLint("NewApi")
+    public static void printPDFFile(final Context context, final String printFile){
+        try {
+            PrintManager printManager = (PrintManager) context.getSystemService(Context.PRINT_SERVICE);
+            String jobName = "Cam Nang Nguoi Lai Xe";
+            PrintDocumentAdapter pda = new PrintDocumentAdapter() {
+
+                @Override
+                public void onWrite(PageRange[] pages, ParcelFileDescriptor destination, CancellationSignal cancellationSignal, WriteResultCallback callback) {
+                    InputStream input = null;
+                    OutputStream output = null;
+
+                    try {
+                        input = context.getAssets().open(printFile);
+                        output = new FileOutputStream(destination.getFileDescriptor());
+
+                        byte[] buf = new byte[1024];
+                        int bytesRead;
+
+                        while ((bytesRead = input.read(buf)) > 0) {
+                            output.write(buf, 0, bytesRead);
+                        }
+                        callback.onWriteFinished(new PageRange[]{PageRange.ALL_PAGES});
+
+                    } catch (FileNotFoundException e) {
+                        //Catch exception
+                        Log.d("TayPVS" ,"TayPVS - FileNotFoundException : " + e.getMessage());
+                    } catch (Exception e) {
+                        //Catch exception'
+                        e.getStackTrace();
+                    } finally {
+                        try {
+                            input.close();
+                            output.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+
+                @Override
+                public void onLayout(PrintAttributes oldAttributes, PrintAttributes newAttributes, CancellationSignal cancellationSignal, LayoutResultCallback callback, Bundle extras) {
+
+                    if (cancellationSignal.isCanceled()) {
+                        callback.onLayoutCancelled();
+                        return;
+                    }
+
+//                int pages = computePageCount(newAttributes);
+
+                    PrintDocumentInfo pdi = new PrintDocumentInfo.Builder(printFile).setContentType(PrintDocumentInfo.CONTENT_TYPE_DOCUMENT).build();
+                    callback.onLayoutFinished(pdi, true);
+                }
+            };
+            printManager.print(jobName, pda, null);
+        }
+        catch (Exception e){
+
+        }
     }
 }

@@ -214,6 +214,13 @@ public class ContentDetailMultiTaskActivity extends BaseActivity {
 
                 mDocview.setAdapter(new MuPDFPageAdapter(this, core));
                 pdfView.addView(mDocview);
+                findViewById(R.id.print_btn).setVisibility(View.VISIBLE);
+                findViewById(R.id.print_btn).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        CommonUtils.printPDFFile(getBaseContext(), currentContent.image+".pdf");
+                    }
+                });
             }
         }
 

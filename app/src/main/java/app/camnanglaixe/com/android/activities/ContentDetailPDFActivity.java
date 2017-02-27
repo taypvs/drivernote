@@ -3,6 +3,7 @@ package app.camnanglaixe.com.android.activities;
 import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -90,6 +91,13 @@ public class ContentDetailPDFActivity extends BaseActivity {
 
                     mDocview.setAdapter(new MuPDFPageAdapter(this, core));
                     pdfView.addView(mDocview);
+                    findViewById(R.id.print_btn).setVisibility(View.VISIBLE);
+                    findViewById(R.id.print_btn).setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            CommonUtils.printPDFFile(getBaseContext(), currentSubTopic.content.get(0).image + ".pdf");
+                        }
+                    });
                 }
             }
 

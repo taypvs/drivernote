@@ -40,4 +40,15 @@
         android:visibility="gone"
         android:padding="5dp"/>
 
+    <ImageView
+        android:id="@+id/print_btn"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@drawable/print"
+        android:visibility="gone"
+        android:padding="5dp"/>
+
 </RelativeLayout>

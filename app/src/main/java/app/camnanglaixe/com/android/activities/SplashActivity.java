@@ -1,5 +1,7 @@
 package app.camnanglaixe.com.android.activities;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -48,11 +50,17 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
 
 
                     Log.d("TayPVS", "TayPVS - isHaveNewVersion : " + CommonUtils.isHaveNewVersion(latestVersion, CommonUtils.getAppVersion(getBaseContext())));
+                    if(CommonUtils.isHaveNewVersion(latestVersion, CommonUtils.getAppVersion(getBaseContext()))){
+                        showDialogUpdate();
+                    }
+                    else {
+                        loadAllws = new LoadFullJsonWebservice(this, this);
+                        loadAllws.doLoadAPI();
+                    }
                 }catch(Exception e){
-
+                    loadAllws = new LoadFullJsonWebservice(this, this);
+                    loadAllws.doLoadAPI();
                 }
-                loadAllws = new LoadFullJsonWebservice(this, this);
-                loadAllws.doLoadAPI();
             } else {
                 if(CommonUtils.isSavedTopics(getBaseContext())){
                     // Execute some code after 2 seconds have passed
@@ -130,6 +138,27 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
 
     }
 
+    public void showDialogUpdate() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(SplashActivity.this);
+        builder.setIcon(android.R.drawable.ic_dialog_info);
+        builder.setTitle("Cẩm Nang Người Lái Xe");
+        builder.setMessage("Đã có bản cập nhật mới trên Google Play!!!");
+        builder.setPositiveButton("Cập nhật", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                //DO TASK
+                arg0.dismiss();
+                CommonUtils.openAppRating(getBaseContext());
+                System.exit(0);
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        //After calling show method, you need to check your condition and
+        //enable/ disable buttons of dialog
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setEnabled(false); //BUTTON1 is positive button
+    }
 
 }
 
