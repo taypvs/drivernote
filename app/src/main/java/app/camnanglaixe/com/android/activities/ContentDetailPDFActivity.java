@@ -1,6 +1,8 @@
 package app.camnanglaixe.com.android.activities;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -95,7 +97,12 @@ public class ContentDetailPDFActivity extends BaseActivity {
                     findViewById(R.id.print_btn).setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            CommonUtils.printPDFFile(getBaseContext(), currentSubTopic.content.get(0).image + ".pdf");
+                            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT){
+                                CommonUtils.printPDFFile(getBaseContext(), currentSubTopic.content.get(0).image + ".pdf");
+                            } else{
+                                showDialogSdkError();
+                            }
+
                         }
                     });
                 }
@@ -199,4 +206,23 @@ public class ContentDetailPDFActivity extends BaseActivity {
         }
     }
 
+    public void showDialogSdkError() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(ContentDetailPDFActivity.this);
+        builder.setIcon(android.R.drawable.ic_dialog_info);
+        builder.setTitle("Cẩm Nang Người Lái Xe");
+        builder.setMessage("Chức năng này chỉ dành cho Android 4.4 trở lên");
+        builder.setPositiveButton("Cập nhật", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                //DO TASK
+                arg0.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        //After calling show method, you need to check your condition and
+        //enable/ disable buttons of dialog
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setEnabled(false); //BUTTON1 is positive button
+    }
 }

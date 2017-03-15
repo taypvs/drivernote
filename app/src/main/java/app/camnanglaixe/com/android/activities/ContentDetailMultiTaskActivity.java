@@ -1,6 +1,8 @@
 package app.camnanglaixe.com.android.activities;
 
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
@@ -218,7 +220,12 @@ public class ContentDetailMultiTaskActivity extends BaseActivity {
                 findViewById(R.id.print_btn).setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        CommonUtils.printPDFFile(getBaseContext(), currentContent.image+".pdf");
+                        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT){
+                            CommonUtils.printPDFFile(getBaseContext(), currentContent.image+".pdf");
+                        } else{
+                            showDialogSdkError();
+                        }
+
                     }
                 });
             }
@@ -252,5 +259,25 @@ public class ContentDetailMultiTaskActivity extends BaseActivity {
                 findViewById(R.id.multi_content_sv).scrollTo(0, 0);
             }
         });
+    }
+
+    public void showDialogSdkError() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(ContentDetailMultiTaskActivity.this);
+        builder.setIcon(android.R.drawable.ic_dialog_info);
+        builder.setTitle("Cẩm Nang Người Lái Xe");
+        builder.setMessage("Chức năng này chỉ dành cho Android 4.4 trở lên");
+        builder.setPositiveButton("Cập nhật", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface arg0, int arg1) {
+                //DO TASK
+                arg0.dismiss();
+            }
+        });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        //After calling show method, you need to check your condition and
+        //enable/ disable buttons of dialog
+        dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setEnabled(false); //BUTTON1 is positive button
     }
 }
