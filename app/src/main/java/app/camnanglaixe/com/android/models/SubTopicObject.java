@@ -32,7 +32,7 @@ public class SubTopicObject {
                 content.add(contentDetailRule);
             }
         }catch (JSONException e){
-
+            e.printStackTrace();
         }
     }
 

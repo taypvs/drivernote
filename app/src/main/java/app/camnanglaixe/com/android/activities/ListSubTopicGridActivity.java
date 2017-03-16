@@ -1,7 +1,6 @@
 package app.camnanglaixe.com.android.activities;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -46,7 +45,6 @@ public class ListSubTopicGridActivity extends BaseActivity {
             try {
                 key_topic = getIntent().getIntExtra("KEY_TOPIC", 0);
                 JSONObject jsonObject = new JSONObject(PreferenceUtils.getString(getBaseContext(), PreferenceUtils.TOPIC_NUMBER + key_topic));
-                Log.d("TayPVS", "TayPVS - subtopic - jsonObject " + jsonObject.toString());
                 currentTopic = JsonParseMachine.parseTopic(jsonObject);
             }catch (JSONException e){
                 e.printStackTrace();

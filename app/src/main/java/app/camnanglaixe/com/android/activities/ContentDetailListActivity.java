@@ -1,7 +1,6 @@
 package app.camnanglaixe.com.android.activities;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -59,7 +58,6 @@ public class ContentDetailListActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 Gson gson = new Gson();
                 String json = gson.toJson(currentSubTopic.content.get(i));
-                Log.d("TayPVS", "TayPVS - json : " + json);
                 startContentAdvance(json);
             }
         });

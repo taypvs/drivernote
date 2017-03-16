@@ -39,7 +39,7 @@ public class FullTopics {
                 listTopics.add(topic);
             }
         }catch (JSONException e){
-
+            e.printStackTrace();
         }
     }
 }

@@ -65,7 +65,6 @@ public class ContentDetailMultiTaskActivity extends BaseActivity {
             try {
                 String json = getIntent().getStringExtra("KEY_CONTENT");
                 JSONObject jsonObject = new JSONObject(json);
-                Log.d("TayPVS", "TayPVS - subtopic - jsonObject " + jsonObject.toString());
                 currentContent = JsonParseMachine.parseContent(jsonObject);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -214,7 +213,7 @@ public class ContentDetailMultiTaskActivity extends BaseActivity {
 
                 };
 
-                mDocview.setAdapter(new MuPDFPageAdapter(this, core));
+                mDocview.setAdapter(new MuPDFPageAdapter(this, null, core));
                 pdfView.addView(mDocview);
                 findViewById(R.id.print_btn).setVisibility(View.VISIBLE);
                 findViewById(R.id.print_btn).setOnClickListener(new View.OnClickListener() {

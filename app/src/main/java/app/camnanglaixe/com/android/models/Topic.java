@@ -56,7 +56,7 @@ public class Topic {
                 }
             }
         }catch (JSONException e){
-
+            e.printStackTrace();
         }
     }
 

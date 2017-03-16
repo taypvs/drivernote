@@ -49,7 +49,7 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
                     String latestVersion = versionChecker.execute().get();
 
 
-                    Log.d("TayPVS", "TayPVS - isHaveNewVersion : " + CommonUtils.isHaveNewVersion(latestVersion, CommonUtils.getAppVersion(getBaseContext())));
+//                    Log.d("TayPVS", "TayPVS - isHaveNewVersion : " + CommonUtils.isHaveNewVersion(latestVersion, CommonUtils.getAppVersion(getBaseContext())));
                     if(CommonUtils.isHaveNewVersion(latestVersion, CommonUtils.getAppVersion(getBaseContext()))){
                         showDialogUpdate();
                     }
@@ -93,7 +93,6 @@ public class SplashActivity extends BaseActivity implements ResponseCallbackInte
 
     @Override
     public void onResultSuccess(Object result, String TAG) {
-        Log.d("TayPVS", "TayPVS - onResultSuccess : " + result.toString());
         switch (TAG) {
             case Constanst.TAG_API_GET_FULL_INFO:
                 ((TextView) findViewById(R.id.test)).setText(result.toString());

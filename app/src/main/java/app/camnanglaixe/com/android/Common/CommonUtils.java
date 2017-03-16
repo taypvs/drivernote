@@ -80,7 +80,6 @@ public class CommonUtils {
         // Convert topic to String and save
         Gson gson = new Gson();
         String json = gson.toJson(object);
-        Log.d("TayPVS", "TayPVS - saveObjectToFile : " + json);
         // write text to file
         try {
             FileOutputStream fileout = context.openFileOutput(fileName, context.MODE_PRIVATE);
